@@ -1,12 +1,16 @@
 ﻿img 
 {
     border: none !important;
-    -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1)));
+    /* -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1))); */
 }
 
 .nowrap 
 {
     white-space: nowrap;
+}
+
+.reveal ul {
+    list-style-type: none;
 }
 
 .pesentation-details 
@@ -15,6 +19,7 @@
     left: 10px;
     bottom: 5px;
     color: gray;
+    font-size: 0.8em;
 }
 
 .key 

@@ -46,6 +46,8 @@
                 
                 <section data-markdown>
                     ![just a joke](images/js_good_parts.jpg)
+                    
+                    <small>;-)</small>
                 </section>
 
                 <section data-markdown>
@@ -53,26 +55,28 @@
                     
                     Higher code qualitiy. No fancy stuff.  
                     Pragmatic solutions. Reduced to the max.
+                    
+                    <aside class="notes">
+                        TODO!
+                    </aside>
                 </section>
-
-
-
-
-
-
-
 
                 <section>
-                    <h2>Clever Quotes</h2>
-                    <p>
-                        These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                                                                  The nice thing about standards is that there are so many to choose from</q> and block:
-                    </p>
-                    <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-                        reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-                    </blockquote>
+                    
+                    <section data-markdown>
+                        # Know Your M$ Tools
+                    </section>
+                
+                    <section  data-markdown>
+                        * Visual Studio 2010/212
+                        * [JScript Editor Extensions](http://visualstudiogallery.msdn.microsoft.com/872d27ee-38c7-4a97-98dc-0d8a431cc2ed)
+                        * [Resharper 7.1](http://www.jetbrains.com/resharper/whatsnew/#javascript)
+                        * [JSHint](http://www.jshint.com/platforms/)
+                        * [Chutzpah](http://chutzpah.codeplex.com/)
+                        * [Firebug](https://getfirebug.com/) / F12
+                    </section>
                 </section>
+
 
                 <section>
                     <h2>Pretty Code</h2>
@@ -104,9 +108,14 @@ function linkify( selector ) {
 
         </div>
         
-        <!-- Pesentation Details -->
         <div class="pesentation-details">
-            <p>Created by <a href="http://johanneshoppe.de">Johannes Hoppe</a></p>
+            <p>
+                Created by <a href="http://johanneshoppe.de" target="_blank">Johannes Hoppe</a> |
+                <a href="?notes" title="or press S">Speaker Notes</a> |
+                <a href="https://github.com/JohannesHoppe/JsCrashCourse" target="_blank">GitHub</a>
+
+            </p>
+                
         </div>
 
         <script src="lib/js/head.min.js"></script>
@@ -120,7 +129,10 @@ function linkify( selector ) {
                 controls: true,
                 progress: true,
                 history: true,
+                keyboard: true,
+                overview: true,
                 center: true,
+                rollingLinks: false,
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
                 transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
