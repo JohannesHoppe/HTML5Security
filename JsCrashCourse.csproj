@@ -51,6 +51,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\custom.css" />
     <Content Include="css\print\paper.css" />
     <Content Include="css\print\pdf.css" />
     <Content Include="css\reveal.css" />
@@ -61,6 +62,7 @@
     <Content Include="css\theme\serif.css" />
     <Content Include="css\theme\simple.css" />
     <Content Include="css\theme\sky.css" />
+    <Content Include="images\js_good_parts.jpg" />
     <Content Include="index.html" />
     <Content Include="js\reveal.js" />
     <Content Include="js\reveal.min.js" />

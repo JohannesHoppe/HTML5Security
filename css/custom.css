@@ -1,0 +1,38 @@
+﻿img 
+{
+    border: none !important;
+    -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1)));
+}
+
+.nowrap 
+{
+    white-space: nowrap;
+}
+
+.pesentation-details 
+{
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    color: gray;
+}
+
+.key 
+{
+    position: relative;
+    bottom: 5px;
+    display: inline-block;
+    font: 20px monospace !important;
+    line-height: 30px;
+    width: 30px;
+    color: #000;
+    padding: 3px !important;
+    text-shadow: none;
+    letter-spacing: 0;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+    vertical-align: sub !important;
+    margin: 0px 7px !important;
+
+}
