@@ -1,7 +1,12 @@
 ﻿img 
 {
     border: none !important;
-    /* -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1))); */
+
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    
+    background-color: transparent !important;
 }
 
 .nowrap 
@@ -22,6 +27,17 @@
     font-size: 0.8em;
 }
 
+.pesentation-details a 
+{
+    color: #51483D;
+    text-decoration: none;
+}
+
+.pesentation-details a:hover 
+{
+    color: #8B7C69;
+}
+
 .key 
 {
     position: relative;
@@ -39,5 +55,20 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
     vertical-align: sub !important;
     margin: 0px 7px !important;
+}
 
+.alert .reveal .state-background {
+    background: rgba( 200, 50, 30, .7 );
+}
+
+mustache
+{
+    display: block;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    font-size: 2.5em;
+    font-weight: bold;
 }

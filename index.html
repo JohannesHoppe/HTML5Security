@@ -64,7 +64,9 @@
                 <section>
                     
                     <section data-markdown>
-                        # Know Your M$ Tools
+                        # Know Your<br>M$ Tools
+                        
+                        ![tools](images/tool.png)
                     </section>
                 
                     <section  data-markdown>
@@ -74,6 +76,118 @@
                         * [JSHint](http://www.jshint.com/platforms/)
                         * [Chutzpah](http://chutzpah.codeplex.com/)
                         * [Firebug](https://getfirebug.com/) / F12
+                    </section>
+                </section>
+                
+                <section>
+                    
+                    <section data-markdown>
+                        # Know the pitfalls
+                        
+                        ![pitfalls](images/banana_peel.png)
+                    </section>
+                
+                    <section data-markdown>
+                        ## Implied globals
+                        <small>Forgetting var</small>
+                        
+                        ```javascript
+                        function foo() {
+                            bar = 1;
+                        }
+                        
+                        foo();
+                        ```
+
+                    </section>
+
+                    <section  data-markdown>
+                        ## Boolean type conversion
+                        <small>To Truthy or to Falsy. That is the *only* question!</small>
+                        
+                        ```javascript
+                        var el = document.getElementById('does_not_exist');
+                        
+                        if(el == false) {
+                            alert("shouldn't we see this message?!");
+                        }
+                        ```
+                    </section>
+
+                    <section  data-markdown>
+                        ## Trailing comma
+                        <small>works on my machine!</small>
+                        
+                        ```javascript
+                        var foo = { 
+                            bar: "bar", 
+                            baz: "baz", 
+                        };
+                        ```
+                    </section>
+                    
+                    <section  data-markdown>
+                        ## Return undefined
+                        <small>señor developers wear mustaches</small>
+                        <mustache>{</mustache>
+
+                        ```javascript
+                        var foo = function() {
+                            return
+                            { 
+                                x : "looks like C# now!"
+                            };
+                        }
+                        ```
+                    </section>
+
+                    <section  data-markdown>
+                        ## Associative arrays
+                        <small>they don't exist</small>
+                        
+                        ```javascript
+                        var x = [];
+                        x['foo'] = "bar";
+                        ```
+                    </section>
+
+                    <section  data-markdown>
+                        ## try .. catch .. finally
+                        <small>who cares about the reason?</small>
+                        
+                        ```javascript
+                        var foo = function() {
+                            try {
+                               doCrazyStuff;
+                            } catch (e) {
+                                return false;
+                            }
+                            return true;
+                        };
+                        ```
+                    </section>
+                    
+                    <section  data-markdown>
+                        ## Eval
+                        <small>... and the job is done</small>
+                        
+                        ```javascript
+                        function poorMansJsonParser(text) { 
+                            return eval("(" + text + ")");
+                        }
+
+                        var text = ' { "hello" : "world" } ';
+                        var json = poorMansJsonParser(text);
+                        ```
+                    </section>
+                    
+                    <section  data-markdown data-state="alert">
+                        ## Eval is evil!
+                        <small>Never ever!</small>
+                        
+                        ```javascript
+                        var text = ' function() { alert("hacked!"); })( ';
+                        ```
                     </section>
                 </section>
 
@@ -150,6 +264,9 @@ function linkify( selector ) {
             });
 
         </script>
+        
+        <!-- for some live hacking -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
     </body>
 </html>
