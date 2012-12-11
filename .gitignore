@@ -8,3 +8,9 @@ node_modules/
 /bin
 *.user
 *.suo
+_Resharper*
+
+
+_UpgradeReport_Files/*
+UpgradeLog*
+Backup/*
