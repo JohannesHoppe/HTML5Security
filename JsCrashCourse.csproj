@@ -15,6 +15,10 @@
     <AssemblyName>JsCrashCourse</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,6 +71,7 @@
     <Content Include="images\js_good_parts.jpg" />
     <Content Include="images\tool.jpg" />
     <Content Include="index.html" />
+    <Content Include="js\jquery.js" />
     <Content Include="js\reveal.js" />
     <Content Include="js\reveal.min.js" />
     <Content Include="lib\css\zenburn.css" />

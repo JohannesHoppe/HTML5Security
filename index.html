@@ -53,8 +53,8 @@
                 <section data-markdown>
                     # My Goal
                     
-                    Higher code qualitiy. No fancy stuff.  
-                    Pragmatic solutions. Reduced to the max.
+                    Higher code qualitiy. Pragmatic solutions.  
+                    No fancy stuff.                          
                     
                     <aside class="notes">
                         TODO!
@@ -82,7 +82,7 @@
                 <section>
                     
                     <section data-markdown>
-                        # Know the pitfalls
+                        # Know the<br>pitfalls
                         
                         ![pitfalls](images/banana_peel.png)
                     </section>
@@ -91,12 +91,10 @@
                         ## Implied globals
                         <small>Forgetting var</small>
                         
-                        ```javascript
-                        function foo() {
+                        ```javascript contenteditable
+                        var foo = function() {
                             bar = 1;
-                        }
-                        
-                        foo();
+                        };
                         ```
 
                     </section>
@@ -105,7 +103,7 @@
                         ## Boolean type conversion
                         <small>To Truthy or to Falsy. That is the *only* question!</small>
                         
-                        ```javascript
+                        ```javascript contenteditable
                         var el = document.getElementById('does_not_exist');
                         
                         if(el == false) {
@@ -118,7 +116,7 @@
                         ## Trailing comma
                         <small>works on my machine!</small>
                         
-                        ```javascript
+                        ```javascript contenteditable
                         var foo = { 
                             bar: "bar", 
                             baz: "baz", 
@@ -131,7 +129,7 @@
                         <small>señor developers wear mustaches</small>
                         <mustache>{</mustache>
 
-                        ```javascript
+                        ```javascript contenteditable
                         var foo = function() {
                             return
                             { 
@@ -145,7 +143,7 @@
                         ## Associative arrays
                         <small>they don't exist</small>
                         
-                        ```javascript
+                        ```javascript contenteditable
                         var x = [];
                         x['foo'] = "bar";
                         ```
@@ -155,7 +153,7 @@
                         ## try .. catch .. finally
                         <small>who cares about the reason?</small>
                         
-                        ```javascript
+                        ```javascript contenteditable
                         var foo = function() {
                             try {
                                doCrazyStuff;
@@ -166,12 +164,40 @@
                         };
                         ```
                     </section>
+
+                    <section data-markdown>
+                        ## for .. in
+                        <small>use a framework</small>
+                        
+                        ```javascript contenteditable
+                        var data = {
+                            foo: "oh",
+                            bar: "my"
+                        }
+                        
+                        for (var d in data) {
+                            console.log(data[d]);
+                        }
+                        ```
+                    </section>   
+                    
+                     <section data-markdown>
+                        ## for .. in
+                        <small>& never touch Object.prototype</small>
+                        
+                        ```javascript contenteditable   
+                         
+                         Object.prototype.yetAnotherToString = function() {
+                            return "god";
+                        } 
+                        ```
+                    </section>                      
                     
                     <section  data-markdown>
                         ## Eval
                         <small>... and the job is done</small>
                         
-                        ```javascript
+                        ```javascript contenteditable
                         function poorMansJsonParser(text) { 
                             return eval("(" + text + ")");
                         }
@@ -181,36 +207,38 @@
                         ```
                     </section>
                     
-                    <section  data-markdown data-state="alert">
+                    <section data-markdown data-state="alert">
                         ## Eval is evil!
                         <small>Never ever!</small>
                         
-                        ```javascript
+                        ```javascript contenteditable
                         var text = ' function() { alert("hacked!"); })( ';
                         ```
+                    </section>
+                    
+                    <section data-markdown>
+                        ## Globals
+                        <small>the mother of all antipatterns</small>
+                        
+                        ```javascript contenteditable
+                        function foo() {
+                            return "bar";
+                        }         
+                        
+                        console.log(this['foo']());
+                        ```
+                    </section>
+                    
+                    <section data-markdown>
+                        image of a cute kitteh
                     </section>
                 </section>
 
 
-                <section>
-                    <h2>Pretty Code</h2>
-                    <pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
-  }
-}
-                    </code></pre>
-                    <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+                <section data-markdown>
+                    # Pretty Code
+                    
+                    <señorMustache>{</señorMustache>
                 </section>
 
 
@@ -266,7 +294,7 @@ function linkify( selector ) {
         </script>
         
         <!-- for some live hacking -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="js/jquery.js"></script>
 
     </body>
 </html>
