@@ -192,7 +192,23 @@
                         } 
                         ```
                     </section>                      
-                    
+ 
+                     <section data-markdown>
+                        ## Hosting
+                        <small>declare upfront all variables</small>
+                        
+                        ```javascript contenteditable   
+                         
+                         var foo = "global";
+                         
+                         var function() {
+                            alert(foo);
+                            var foo = "local";
+                            alert(foo);
+                         };
+                        ```
+                    </section>                        
+                                       
                     <section  data-markdown>
                         ## Eval
                         <small>... and the job is done</small>
@@ -234,13 +250,23 @@
                     </section>
                 </section>
 
-
-                <section data-markdown>
-                    # Pretty Code
+                <section>
+                    <section data-markdown>
+                        # Pretty Code
                     
-                    <señorMustache>{</señorMustache>
-                </section>
+                        <señorMustache>{</señorMustache>
+                    </section>
+                    
+                    <section data-markdown>
+                        ## Globals
+                        <small>reduce, minimize, delete or kill them</small>
+                        
+                        ```javascript contenteditable
+                        (function() { "wtf?" })();
+                        ```                            
+                    </section>
 
+                </section>
 
                 <section>
                     <h1>Danke!</h1>
@@ -261,7 +287,7 @@
         </div>
 
         <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.min.js"></script>
+        <script src="js/reveal.js"></script>
 
         <script>
 
