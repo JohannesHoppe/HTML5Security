@@ -201,7 +201,7 @@
                          
                          var foo = "global";
                          
-                         var function() {
+                         var bar = function() {
                             alert(foo);
                             var foo = "local";
                             alert(foo);
@@ -256,6 +256,19 @@
                     
                         <señorMustache>{</señorMustache>
                     </section>
+   
+                    <section data-markdown>
+                        ## Coding conventions
+                        
+                        <ol>
+							<li class="fragment">intentation (4 spaces!)</li>
+							<li class="fragment">curly braces everywhere</li>
+                            <li class="fragment">semicolons everywhere</li>    
+                            <li class="fragment">constructor functions: UpperCamelCase</li>   
+                            <li class="fragment">all other: lowerCamelCase</li> 
+                        </ol>
+
+                    </section>
                     
                     <section data-markdown>
                         ## Globals
@@ -263,6 +276,33 @@
                         
                         ```javascript contenteditable
                         (function() { "wtf?" })();
+                        ```                            
+                    </section>   
+                    
+                    <section data-markdown>
+                        ## Inheritance
+                        <small>favour composition over inheritance</small>
+                        
+                        ```javascript contenteditable
+                        "no example here";
+                        ```                            
+                    </section>
+                    
+                    <section data-markdown>
+                        ## Module 
+                        <small>reduce, minimize, delete or kill them</small>
+                        
+                        ```javascript contenteditable
+                        (function() { "wtf?" })();
+                        ```                            
+                    </section>
+                    
+                    <section data-markdown>
+                        ## Modul loaders
+                        <small>use AMD (require.js)</small>
+                        
+                        ```javascript contenteditable
+                        require(['jquery'])
                         ```                            
                     </section>
 
