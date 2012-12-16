@@ -103,3 +103,22 @@ small.miniR {
     width: 70%;
 }
 
+ul.model li {
+    margin-top: 30px;
+}
+ul.model li {
+    margin-bottom: 25px;
+}
+
+ul.model span
+{
+    padding: 5px !important;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+    
+    margin: 7px;
+    background-color: #51483D;
+    color: white;
+    width: 300px;
+}
