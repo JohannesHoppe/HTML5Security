@@ -34,7 +34,9 @@
         }
         
         // TODO: HACKED
-        $("code[fragment]").addClass("fragment");
+        if (typeof jquery != "undefined") {
+            jquery("code[fragment]").addClass("fragment");
+        }
     }
 
 })();

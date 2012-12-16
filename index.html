@@ -413,6 +413,12 @@
         <!-- delicious libs for some live hacking -->
         <script src="js/require.js"></script>
         <script src="js/jquery.js"></script>
+        <script>
+            // tasty hack to get back the old global $
+            require(['jquery'], function(jquery) {
+                window.$ = window.jquery = jquery;
+            });
+        </script>
 
     </body>
 </html>
