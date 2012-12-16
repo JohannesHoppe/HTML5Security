@@ -103,11 +103,12 @@ small.miniR {
     width: 70%;
 }
 
-ul.model li {
+ul.model {
     margin-top: 30px;
 }
 ul.model li {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    color: #494D4D
 }
 
 ul.model span
