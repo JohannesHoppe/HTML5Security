@@ -78,3 +78,21 @@ señorMustache {
     margin-top: 100px;
     font-size: 5em;    
 }
+
+blockquote {
+    margin-top: 40px !important;
+    background-color: white !important;
+}
+
+ol {
+    margin: 40px 0 0 130px !important;
+    color: #494D4D;
+}
+
+small.miniR {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 10px;
+    width: 70%;
+}
+

@@ -55,10 +55,6 @@
                     
                     Higher code qualitiy. Pragmatic solutions.  
                     No fancy stuff.                          
-                    
-                    <aside class="notes">
-                        TODO!
-                    </aside>
                 </section>
 
                 <section>
@@ -246,7 +242,10 @@
                     </section>
                     
                     <section data-markdown>
-                        image of a cute kitteh
+                        ![kitteh](images/kitteh.jpg)
+                        
+                        <small>Every time you clutter the global namespace,  
+                        somewhere in the world a helpless kitten dies!</small>
                     </section>
                 </section>
 
@@ -281,20 +280,41 @@
                     
                     <section data-markdown>
                         ## Inheritance
-                        <small>favour composition over inheritance</small>
+                        <small>favour composition over inheritance (FCoI)</small>
                         
-                        ```javascript contenteditable
-                        "no example here";
-                        ```                            
+                        <blockquote>
+                            Because inheritance exposes a subclass to details of its parent's implementation,
+                            it's often said that 'inheritance breaks encapsulation'.  
+                        </blockquote>
+                        <small class="miniR">(Gang of Four 1995:19)</small>
                     </section>
                     
                     <section data-markdown>
-                        ## Module 
-                        <small>reduce, minimize, delete or kill them</small>
+                        ## Revealing Module Pattern 
                         
-                        ```javascript contenteditable
-                        (function() { "wtf?" })();
-                        ```                            
+                        <aside class="notes">
+						                      
+                        <pre>
+                        var myRevealingModule = function () {
+
+                                var _name = "Johannes";
+
+                                function greetings() {
+                                    console.log("Hello " + privateVar);
+                                }
+        
+                                function setName(name) {
+                            
+                                    _name = name;
+                                }
+
+                                return {
+                                    setName: setName
+                                };
+                        }();
+                        </pre>
+
+                        </aside>
                     </section>
                     
                     <section data-markdown>
@@ -302,7 +322,13 @@
                         <small>use AMD (require.js)</small>
                         
                         ```javascript contenteditable
-                        require(['jquery'])
+                        define('test', ['jquery'], function() {
+                            alert("hello!");
+                        });
+                        
+                        require(['test'], function(t) {
+                            t();
+                        });
                         ```                            
                     </section>
 
@@ -319,7 +345,7 @@
         <div class="pesentation-details">
             <p>
                 Created by <a href="http://johanneshoppe.de" target="_blank">Johannes Hoppe</a> |
-                <a href="?notes" title="or press S">Speaker Notes</a> |
+                <!--<a href="?notes" title="or press S">Speaker Notes</a> |-->
                 <a href="https://github.com/JohannesHoppe/JsCrashCourse" target="_blank">GitHub</a>
 
             </p>
@@ -359,8 +385,9 @@
 
         </script>
         
-        <!-- for some live hacking -->
+        <!-- delicious libs for some live hacking -->
         <script src="js/jquery.js"></script>
+        <script src="js/require.js"></script>
 
     </body>
 </html>
