@@ -32,6 +32,9 @@
         if( notes ) {
             section.appendChild( notes );
         }
+        
+        // TODO: HACKED
+        $("code[fragment]").addClass("fragment");
     }
 
 })();

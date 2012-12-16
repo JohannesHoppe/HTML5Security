@@ -89,6 +89,13 @@ ol {
     color: #494D4D;
 }
 
+small.mini {
+    text-align: left;
+    font-size: 12px;
+    margin-top: 10px;
+    width: 90%;
+}
+
 small.miniR {
     text-align: right;
     font-size: 12px;

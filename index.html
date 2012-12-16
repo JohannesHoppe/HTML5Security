@@ -260,8 +260,8 @@
                         ## Coding conventions
                         
                         <ol>
-							<li class="fragment">intentation (4 spaces!)</li>
-							<li class="fragment">curly braces everywhere</li>
+                            <li class="fragment">intentation (4 spaces!)</li>
+                            <li class="fragment">curly braces everywhere</li>
                             <li class="fragment">semicolons everywhere</li>    
                             <li class="fragment">constructor functions: UpperCamelCase</li>   
                             <li class="fragment">all other: lowerCamelCase</li> 
@@ -292,47 +292,72 @@
                     <section data-markdown>
                         ## Revealing Module Pattern 
                         
-                        <aside class="notes">
-						                      
-                        <pre>
+                        ```javascript contenteditable fragment
                         var myRevealingModule = function () {
 
-                                var _name = "Johannes";
+                            var _name = "Johannes";
 
-                                function greetings() {
-                                    console.log("Hello " + privateVar);
-                                }
+                            function greetings() {
+                                console.log("Hello " + _name);
+                            }
         
-                                function setName(name) {
-                            
-                                    _name = name;
-                                }
+                            function setName(name) {
+                                _name = name;
+                            }
 
-                                return {
-                                    setName: setName
-                                };
+                            return {
+                                setName: setName,
+                                greetings: greetings
+                            };
                         }();
-                        </pre>
-
-                        </aside>
+                        ```
+                        <small class="mini">[&raquo; Documentation](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript)</small>
                     </section>
-                    
+                             
                     <section data-markdown>
                         ## Modul loaders
                         <small>use AMD (require.js)</small>
                         
-                        ```javascript contenteditable
+                        ```javascript contenteditable fragment
                         define('test', ['jquery'], function() {
-                            alert("hello!");
+                        
+                            return {
+                                saySomething : function() { alert("hello!"); }
+                            }
                         });
                         
                         require(['test'], function(t) {
-                            t();
+                            t.saySomething();
                         });
-                        ```                            
+                        ```
                     </section>
 
+                    <section data-markdown>
+                        ## Events
+                        <small>Publish/Subscribe Pattern</small>
+                        
+                        ```javascript contenteditable
+                        var $events = $({});
+                        
+                        $events.bind('somethingHappens', function() {
+                            alert("Something happened!");
+                        });
+                        
+                        $events.trigger('somethingHappens');
+                        ```
+                    </section>        
+                                  
+                    <section data-markdown>
+                        ## Model-View-View Model (MVVM)  
+                        <small>KnockoutJS, Kendo UI...</small>
+                        
+                    </section>    
+                    
+                               
+
                 </section>
+
+                
 
                 <section>
                     <h1>Danke!</h1>
@@ -386,8 +411,8 @@
         </script>
         
         <!-- delicious libs for some live hacking -->
-        <script src="js/jquery.js"></script>
         <script src="js/require.js"></script>
+        <script src="js/jquery.js"></script>
 
     </body>
 </html>

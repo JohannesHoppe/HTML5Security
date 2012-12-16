@@ -72,6 +72,7 @@
     <Content Include="images\tool.jpg" />
     <Content Include="index.html" />
     <Content Include="js\jquery.js" />
+    <Content Include="js\require.js" />
     <Content Include="js\reveal.js" />
     <Content Include="js\reveal.min.js" />
     <Content Include="lib\css\zenburn.css" />
