@@ -32,11 +32,11 @@
         if( notes ) {
             section.appendChild( notes );
         }
-        
-        // TODO: HACKED
-        if (typeof jquery != "undefined") {
-            jquery("code[fragment]").addClass("fragment");
-        }
+    }
+    
+    // TODO: HACKED
+    if (typeof jquery != "undefined") {
+        jquery("code[fragment]").addClass("fragment");
     }
 
 })();
