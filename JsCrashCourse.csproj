@@ -68,8 +68,11 @@
     <Content Include="css\theme\simple.css" />
     <Content Include="css\theme\sky.css" />
     <Content Include="images\banana_peel.png" />
+    <Content Include="images\jasmine_logo.png" />
     <Content Include="images\js_good_parts.jpg" />
-    <Content Include="images\tool.jpg" />
+    <Content Include="images\kitteh.jpg" />
+    <Content Include="images\logo-WebNoteSinglePage.png" />
+    <Content Include="images\tool.png" />
     <Content Include="index.html" />
     <Content Include="js\jquery.js" />
     <Content Include="js\require.js" />
