@@ -275,8 +275,47 @@
                         
                         ```javascript contenteditable
                         (function() { "wtf?" })();
-                        ```                            
-                    </section>   
+                        ```
+                    </section>
+                    
+                    <section data-markdown>
+                        ## The switch-case syndrome
+                        <small>a functional language wants functions!</small>
+                        
+                        ```javascript contenteditable
+                        switch (something) {
+ 
+                            case 1:
+                                doFirst();
+                                break;
+ 
+                            case 2:
+                                doSecond();
+                                break;
+ 
+                            case 3:
+                                doThird();
+                                break;
+                        }
+                        ```
+                    </section> 
+                    
+                    <section data-markdown>
+                        ## Lookub tables
+                        <small>avoid the switch-case syndrome</small>
+                        
+                        ```javascript contenteditable
+                        var methods = {
+                            1: doFirst,
+                            2: doSecond,
+                            3: doThird
+                        };
+                        if (methods[something]) {
+                            methods[something]();
+                        }
+                        ```
+                    </section>
+                    
                     
                     <section data-markdown>
                         ## Inheritance
@@ -288,7 +327,7 @@
                         </blockquote>
                         <small class="miniR">(Gang of Four 1995:19)</small>
                     </section>
-                    
+
                     <section data-markdown>
                         ## Revealing Module Pattern 
                         
