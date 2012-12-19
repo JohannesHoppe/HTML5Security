@@ -124,7 +124,7 @@ ul.model span
     width: 300px;
 }
 
-.jasmine ul.model span {
+ul.model.jasmine span {
     background-color: #9CD175;
 }
 
