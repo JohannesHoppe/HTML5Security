@@ -149,3 +149,7 @@ code.small {
     -o-transition: background-image 0.8s linear;
     transition: background-image 0.8s linear;
 }
+
+green {
+    color: green;
+}

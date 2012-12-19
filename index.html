@@ -520,6 +520,46 @@
                     </section>
                     
                     <section data-markdown>
+                        ## Matchers
+                        
+                        ```javascript contenteditable
+                        expect(x).toEqual(y);
+                        expect(x).toBe(y);
+                        expect(x).toMatch(pattern);
+                        expect(x).toBeDefined();
+                        expect(x).toBeUndefined();
+                        expect(x).toBeNull();
+                        expect(x).toBeTruthy();
+                        expect(x).toBeFalsy();
+                        expect(x).toContain(y);
+                        expect(x).toBeLessThan(y);
+                        expect(x).toBeGreaterThan(y);
+                        expect(function(){fn();}).toThrow(e);
+                        ```
+                    </section>
+                    
+                    <section data-markdown>
+                        ## Own matchers
+                        
+                        ```javascript contenteditable
+                        beforeEach(function () {
+                            this.addMatchers({
+                                isACat: function () {
+                                    return this.actual.isFluffy() && this.actual.isLazy();
+                                }
+                            });
+                        });
+
+                        describe('Garfield', function () {
+                            it('is a cat', function () {
+                                expect(new Garfield()).isACat();
+                            });
+                        });
+                        ```
+                        <small class="mini">[&raquo; Documentation](https://github.com/pivotal/jasmine/wiki/Matchers)</small>
+                    </section>
+                    
+                    <section data-markdown>
                         ## Test-Driven Development
                         
                         1. Write your tests
@@ -527,11 +567,116 @@
                         1. Make them pass
                         1. Refactor
                         1. Repeat
+                        
+                        <br><br>
+                        <small class="mini">
+                            see [Growing Object-Oriented Software, Guided by Tests](http://www.amazon.de/dp/0321503627), page 6<br>
+                            see [Working Effectively with Legacy Code](http://www.amazon.de/dp/0131177052), page 62 or many other</small>
                     </section>
                     
-                     <section data-markdown>
+                    <section data-markdown>
+                        ## 1. Write your test
+
+                        ```javascript contenteditable
+                        describe("saveFormat", function () {
+                        
+                            var original = '{0} - {1} - {2}';
+
+                            it("should replace placeholders", function () {
+                                var expected = 'A - B - C';
+                                var formated = saveFormat(original, 'A', 'B', 'C');
+                                expect(formated).toEqual(expected);
+                            });
+
+                            it("should encode injected content", function () {
+                                var expected = 'A - &amp;lt;b&amp;gt;TEST&amp;lt;/b&amp;gt; - C';
+                                var formated = saveFormat(original,'A','&lt;b&gt;TEST&lt;/b&gt;','C');
+                                expect(formated).toEqual(expected);
+                            });
+                        });
+                        ```
+                    </section>
+                    
+                    <section data-markdown>
+                        ## 2. Watch them fail
+                        
+                        ```javascript contenteditable
+                        var saveFormat = function() { return "boo!"; };
+                        jasmine.getEnv().execute();
+                        ```
+                    </section>
+                    
+                    <section data-markdown>
+                        ## 3. Make them pass
+                        
+                        ```javascript contenteditable
+                        var saveFormat = function(txt) {
+
+                            $(arguments).each(function (i, item) {
+                                if (i > 0) {
+                                    item = ($('&lt;div/&gt;').text(item).html());
+                                    txt = txt.replace("{" + (i - 1) + "}", item);
+                                }
+                            });
+                            return txt;
+                        };
+                        jasmine.getEnv().execute();
+                        ```
+                    </section>
+                    
+                    <section data-markdown>
+                        ## 4. Refactor
+                        
+                        ```javascript contenteditable
+                        
+                        function htmlEncode(input) {
+                            return ($('&lt;div/&gt;').text(input).html());
+                        }
+                        
+                        var saveFormat = function(txt) {
+
+                            $(arguments).each(function (i, item) {
+                                if (i > 0) {
+                                    item = htmlEncode(item);
+                                    txt = txt.replace("{" + (i - 1) + "}", item);
+                                }
+                            });
+                            return txt;
+                        };
+                        jasmine.getEnv().execute();
+                        ```
+                    </section>
+                    
+
+                    <section data-markdown>
+                        ## 5. Repeat
+                        
+                        ```javascript contenteditable
+                        
+                        function htmlEncode(input) {
+                            return ($('&lt;div/&gt;').text(input).html());
+                        }
+                        
+                        var saveFormat = function() {
+                        
+                            var args = Array.prototype.slice.call(arguments);
+                            var txt = args.shift();
+
+                            $(args).each(function (i, item) {
+                                item = htmlEncode(item);
+                                txt = txt.replace("{" + i + "}", item);
+                            });
+                            return txt;
+                        };
+                        jasmine.getEnv().execute();
+                        ```
+                    </section>
+                    
+                    <section data-markdown>
                         ## TTD → BDD
-                     </section>
+                    </section>
+                    
+
 
                 </section>
                 
