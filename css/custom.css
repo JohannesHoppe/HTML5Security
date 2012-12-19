@@ -123,3 +123,25 @@ ul.model span
     color: white;
     width: 300px;
 }
+
+code.small {
+    font-size: 14px;
+    line-height: 16px;
+    max-height: 500px;
+}
+
+.reveal .state-background {
+    background-image: url('../images/pixel.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 454px 454px;
+}
+
+.jasmine .reveal .state-background {
+    background-image: url('../images/jasmine_logo_bg.png');
+    
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-imaeg 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+    transition: background-image 0.8s linear;
+}

@@ -39,4 +39,9 @@
         jquery("code[fragment]").addClass("fragment");
     }
 
+    // TODO: HACKED
+    if (typeof jquery != "undefined") {
+        jquery("code[small]").addClass("small");
+    }
+
 })();

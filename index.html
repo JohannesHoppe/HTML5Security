@@ -412,14 +412,88 @@
                 </section>
 
                 <section data-markdown>
-                    [![WebNoteSinglePage](images/logo-WebNoteSinglePage.png")](http://webnote.codeplex.com)
-
-                    <small class="miniR">(soon on github, promised!)</small>
+                    [![WebNoteSinglePage](images/logo-WebNoteSinglePage.png")](https://github.com/JohannesHoppe/WebNoteSinglePage)
                 </section>
                 
-                <section data-markdown>
-                    ![Jasmine](images/jasmine_logo.png")
-                    _Next time: TDD with JS_
+                <section data-state="jasmine">
+                    
+                    <section data-markdown>
+                        ![Jasmine](images/jasmine_logo.png")
+                        _TDD with [Jasmine](http://pivotal.github.com/jasmine/)_
+                    </section>
+                    
+                    <section data-markdown>
+                        ## Jasmine Bootstrap
+                        
+                        ```html contenteditable small
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Jasmine Spec Runner&lt;/title&gt;
+
+                            &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;lib/jasmine-1.3.1/jasmine.css&quot; /&gt;
+                            &lt;script type=&quot;text/javascript&quot; src=&quot;lib/jasmine-1.3.1/jasmine.js&quot;&gt;&lt;/script&gt;
+                            &lt;script type=&quot;text/javascript&quot; src=&quot;lib/jasmine-1.3.1/jasmine-html.js&quot;&gt;&lt;/script&gt;
+
+                            &lt;!-- include source files here... --&gt;
+                            &lt;script type=&quot;text/javascript&quot; src=&quot;src/Player.js&quot;&gt;&lt;/script&gt;
+                            &lt;script type=&quot;text/javascript&quot; src=&quot;src/Song.js&quot;&gt;&lt;/script&gt;
+
+                            &lt;!-- include spec files here... --&gt;
+                            &lt;script type=&quot;text/javascript&quot; src=&quot;spec/SpecHelper.js&quot;&gt;&lt;/script&gt;
+                            &lt;script type=&quot;text/javascript&quot; src=&quot;spec/PlayerSpec.js&quot;&gt;&lt;/script&gt;
+
+                            &lt;script type=&quot;text/javascript&quot;&gt;
+
+                                (function () {
+
+                                    var htmlReporter = new jasmine.HtmlReporter();
+
+                                    var jasmineEnv = jasmine.getEnv();
+
+                                    jasmineEnv.updateInterval = 1000;
+                                    jasmineEnv.addReporter(htmlReporter);
+                                    jasmineEnv.specFilter = function (spec) {
+                                        return htmlReporter.specFilter(spec);
+                                    };
+
+                                    var currentWindowOnload = window.onload;
+
+                                    window.onload = function () {
+                                        if (currentWindowOnload) { currentWindowOnload(); }
+                                        jasmineEnv.execute();
+                                    };
+                                })();
+                            &lt;/script&gt;
+
+                        &lt;/head&gt;
+
+                        &lt;body&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                        ```
+                    </section>
+
+                    <section data-markdown>
+                        ## Output
+                        
+                        <iframe src="js/jasmine/SpecRunner.html" style="height: 400px; width: 600px; border: 1px solid gray;"></iframe>
+                    </section>
+                    
+                    <section data-markdown>
+                        ## Test-Driven Development
+                        
+                        1. Write your tests
+                        1. Watch them fail
+                        1. Make them pass
+                        1. Refactor
+                        1. Repeat
+                    </section>
+                    
+                     <section data-markdown>
+                        ## TTD → BDD
+                     </section>
+
                 </section>
                 
 
