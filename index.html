@@ -423,6 +423,25 @@
                     </section>
                     
                     <section data-markdown>
+                        ## Why Jasmine?
+                        
+                        <ul class="model">
+                            <li class="fragment">
+                                <span>&nbsp; BDD-style &nbsp;</span>
+                                <small>similar to RSpec</small>
+                            </li>
+                            <li class="fragment">
+                                <span>independent</span>
+                                <small>from any browser, framework, platform or host language</small>
+                            </li>
+                            <li class="fragment">
+                                <span>&nbsp; integrates &nbsp;&nbsp;</span>
+                                <small>into continuous build systems</small>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section data-markdown>
                         ## Jasmine Bootstrap
                         
                         ```html contenteditable small
@@ -551,6 +570,8 @@
         <!-- delicious libs for some live hacking -->
         <script src="js/require.js"></script>
         <script src="js/jquery.js"></script>
+        <script src="js/jasmine/lib/jasmine-1.3.1/jasmine.js"></script>
+
         <script>
             // tasty hack to get back the old global $
             require(['jquery'], function (jquery) {
