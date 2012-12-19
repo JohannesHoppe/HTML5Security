@@ -701,6 +701,35 @@
 
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.js"></script>
+        
+        
+        <!-- delicious libs for some live hacking -->
+        <script src="js/require.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/jasmine/lib/jasmine-1.3.1/jasmine.js"></script>
+        <script src="js/jasmine/lib/jasmine-1.3.1/jasmine.console_reporter.js"></script>
+        <script>
+
+            require(['jquery'], function (jquery) {
+
+                // tasty hack to get back the old global $
+                window.$ = window.jquery = jquery;
+
+                // start print page if print-pdf link was clicked
+                $(function () {
+                    if (window.location.search.match(/print-pdf/gi)) {
+                        window.print();
+                    }
+                });
+
+                // setup jasmine for console demos
+                var consoleReporter = new jasmine.ConsoleReporter();
+                jasmine.getEnv().addReporter(consoleReporter);
+
+                // start with:
+                // jasmine.getEnv().execute();
+            });
+        </script>
 
         <script>
 
@@ -731,34 +760,5 @@
             });
 
         </script>
-        
-        <!-- delicious libs for some live hacking -->
-        <script src="js/require.js"></script>
-        <script src="js/jquery.js"></script>
-        <script src="js/jasmine/lib/jasmine-1.3.1/jasmine.js"></script>
-        <script src="js/jasmine/lib/jasmine-1.3.1/jasmine.console_reporter.js"></script>
-        <script>
-
-            require(['jquery'], function (jquery) {
-
-                // tasty hack to get back the old global $
-                window.$ = window.jquery = jquery;
-
-                // start print page if print-pdf link was clicked
-                $(function () {
-                    if (window.location.search.match(/print-pdf/gi)) {
-                        window.print();
-                    }
-                });
-
-                // setup jasmine for console demos
-                var consoleReporter = new jasmine.ConsoleReporter();
-                jasmine.getEnv().addReporter(consoleReporter);
-
-                // start with:
-                // jasmine.getEnv().execute();
-            });
-        </script>
-
     </body>
 </html>
