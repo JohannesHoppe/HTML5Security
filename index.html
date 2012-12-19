@@ -601,9 +601,12 @@
                         ## 2. Watch them fail
                         
                         ```javascript contenteditable
-                        var saveFormat = function() { return "boo!"; };
+                        var saveFormat = function() { 
+                            return "boo!";
+                        };
                         jasmine.getEnv().execute();
                         ```
+                        <small class="mini"><a href="js/1_jasmine-demo_fail/SpecRunner.html" target="blank">Demo</a></small>
                     </section>
                     
                     <section data-markdown>
@@ -622,6 +625,7 @@
                         };
                         jasmine.getEnv().execute();
                         ```
+                        <small class="mini"><a href="js/2_jasmine-demo_pass/SpecRunner.html" target="blank">Demo</a></small>
                     </section>
                     
                     <section data-markdown>
@@ -645,6 +649,7 @@
                         };
                         jasmine.getEnv().execute();
                         ```
+                        <small class="mini"><a href="js/3_jasmine-demo_refactor/SpecRunner.html" target="blank">Demo</a></small>
                     </section>
                     
 
@@ -662,7 +667,7 @@
                             var args = Array.prototype.slice.call(arguments);
                             var txt = args.shift();
 
-                            $.each(arguments, function (i, item) {
+                            $.each(args, function (i, item) {
                                 item = htmlEncode(item);
                                 txt = txt.replace("{" + i + "}", item);
                             });
@@ -670,6 +675,7 @@
                         };
                         jasmine.getEnv().execute();
                         ```
+                        <small class="mini"><a href="js/4_jasmine-demo_repeat/SpecRunner.html" target="blank">Demo</a></small>
                     </section>
                     
                     <section data-markdown>
@@ -708,9 +714,20 @@
 
                     <section data-markdown>
                         ## Dirty Solution
-                        <small>TODO</small>
+                        <small>work directly on DOM</small>
                         
-                        http://testdrivenwebsites.com/2010/07/29/html-fixtures-in-jasmine-using-jasmine-jquery/
+                        describe('my jQuery plugin', function () {
+                        
+                            beforeEach(function () {
+                                $('#fixture').remove();
+                                $('body').append('<div id="fixture">some HTML code here</div>');
+                            });
+                        
+                            it('should do something', function () {
+                                $('#fixture').myjQueryPlugin();
+                                expect($('#fixture')).toSomething();
+                            });
+                        });
                     </section>
                     
                     <section data-markdown>
