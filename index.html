@@ -612,7 +612,7 @@
                         ```javascript contenteditable
                         var saveFormat = function(txt) {
 
-                            $(arguments).each(function (i, item) {
+                            $.each(arguments, function (i, item) {
                                 if (i > 0) {
                                     item = ($('&lt;div/&gt;').text(item).html());
                                     txt = txt.replace("{" + (i - 1) + "}", item);
@@ -635,7 +635,7 @@
                         
                         var saveFormat = function(txt) {
 
-                            $(arguments).each(function (i, item) {
+                            $.each(arguments, function (i, item) {
                                 if (i > 0) {
                                     item = htmlEncode(item);
                                     txt = txt.replace("{" + (i - 1) + "}", item);
@@ -662,7 +662,7 @@
                             var args = Array.prototype.slice.call(arguments);
                             var txt = args.shift();
 
-                            $(args).each(function (i, item) {
+                            $.each(arguments, function (i, item) {
                                 item = htmlEncode(item);
                                 txt = txt.replace("{" + i + "}", item);
                             });
