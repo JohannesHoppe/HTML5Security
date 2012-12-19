@@ -37,11 +37,11 @@
             <div class="slides">
 
                 <section>
-                    <h1 class="nowrap">JS Crash Course</h1>
+                    <h1 class="nowrap" style="font-size: 3.2em;">JS Crash Course&nbsp;</h1>
                     <h3>for ASP.NET guys</h3>
                     <br>
                     <br>
-                    <small>Navigate with <span class="key">→</span> and <span class="key">↓</span></small>
+                    <small class="hidePrint">Navigate with <span class="key">→</span> and <span class="key">↓</span></small>
                 </section>
                 
                 <section data-markdown>
@@ -433,9 +433,9 @@
         
         <div class="pesentation-details">
             <p>
-                17.12.2012 | Created by <a href="http://johanneshoppe.de" target="_blank">Johannes Hoppe</a> |
-                <!--<a href="?notes" title="or press S">Speaker Notes</a> |-->
-                <a href="https://github.com/JohannesHoppe/JsCrashCourse" target="_blank">GitHub</a>
+                17.12.2012 | Created by <a href="http://johanneshoppe.de" target="_blank">Johannes Hoppe</a>
+                <span class="hidePrint">| <a href="?print-pdf" tooltip="activates PDF print stylesheet" target="_blank">Print PDF</a></span>
+                <span class="hidePrint">| <a href="https://github.com/JohannesHoppe/JsCrashCourse" target="_blank">GitHub</a></span>
 
             </p>
                 
@@ -479,8 +479,14 @@
         <script src="js/jquery.js"></script>
         <script>
             // tasty hack to get back the old global $
-            require(['jquery'], function(jquery) {
+            require(['jquery'], function (jquery) {
                 window.$ = window.jquery = jquery;
+
+                $(function () {
+                    if (window.location.search.match(/print-pdf/gi)) {
+                        window.print();
+                    }
+                });
             });
         </script>
 

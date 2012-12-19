@@ -174,3 +174,7 @@ ul, ol, div, p {
 	border: 1px solid #666;
 	box-shadow: none;
 }
+
+.hidePrint {
+	display: none !important;
+}
