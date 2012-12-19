@@ -428,7 +428,7 @@
                         <ul class="model jasmine">
                             <li class="fragment">
                                 <span>&nbsp; BDD-style &nbsp;</span>
-                                <small>similar to RSpec</small>
+                                <small>similar to JSpec or RSpec,<br>created by authors of jsUnit and Screw.Unit</small>
                             </li>
                             <li class="fragment">
                                 <span>independent</span>
@@ -612,7 +612,7 @@
                         ```javascript contenteditable
                         var saveFormat = function(txt) {
 
-                            $.each(arguments, function (i, item) {
+                            $(arguments).each(function (i, item) {
                                 if (i > 0) {
                                     item = ($('&lt;div/&gt;').text(item).html());
                                     txt = txt.replace("{" + (i - 1) + "}", item);
@@ -673,11 +673,57 @@
                     </section>
                     
                     <section data-markdown>
+                        ## Testing HTML
+                        
+                        &nbsp;  
+                        Jasmine is DOM agnostic  
+                        comes without tools to set up HTML fixtures
+                        
+                        <br><br>
+                            <small class="miniR">Definition:  
+                            A test fixture is a fixed state of a set of  
+                            objects used as a baseline for running tests.</small>
+                    </section>
+
+                    <section data-markdown>
+                        ## First Solution
+                        <small>in memory fixture with jQuery</small>
+                        
+                        ```javascript contenteditable
+                        describe('trivial jQuery plugin', function () {
+                        
+                            var fixture;
+                            beforeEach(function () {
+                                fixture = $('<div>some HTML code here</div>');
+                            });
+                        
+                            it('should do something', function () {
+                                fixture.myjQueryPlugin();
+                                expect(fixture).toSomething();
+                            });
+                        });
+                        ```
+                        <small>... only works for trivial plugins!</small>
+                    </section>
+
+                    <section data-markdown>
+                        ## Dirty Solution
+                        <small>TODO</small>
+                        
+                        http://testdrivenwebsites.com/2010/07/29/html-fixtures-in-jasmine-using-jasmine-jquery/
+                    </section>
+                    
+                    <section data-markdown>
+                        ## jasmine-jquery
+                        <small>TODO</small>
+                        
+                        https://github.com/velesin/jasmine-jquery
+                    </section>
+
+                    <section data-markdown>
                         ## TTD → BDD
                     </section>
                     
-
-
                 </section>
                 
 
