@@ -1,11 +1,13 @@
-﻿describe('test with jasmine-jquery', function () {
-    it('should load many fixtures into DOM', function () {
-        loadFixtures('my_fixture_1.html', 'my_fixture_2.html');
-        expect($('#jasmine-fixtures')).toSomething();
+﻿describe('my jQuery plugin', function () {
+
+    beforeEach(function() {
+        jasmine.getFixtures().fixturesPath = './';
+        jasmine.getFixtures().load('jquery.myPlugin.spec.html');
     });
 
-    it('should only return fixture', function () {
-        var fixture = readFixtures('my_fixture_3.html');
-        expect(fixture).toSomethingElse();
+    it('should do something', function() {
+
+        var $div = $('#helloWorld').myPlugin();
+        expect($div).toHaveClass("newClass");
     });
 });

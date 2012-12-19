@@ -89,6 +89,7 @@
     <Content Include="js\4_jasmine-demo_repeat\saveFormat.spec.js" />
     <Content Include="js\4_jasmine-demo_repeat\SpecRunner.html" />
     <Content Include="js\5_jasmine-demo_jquery\jquery.myPlugin.js" />
+    <Content Include="js\5_jasmine-demo_jquery\jquery.myPlugin.spec.html" />
     <Content Include="js\5_jasmine-demo_jquery\jquery.myPlugin.spec.js" />
     <Content Include="js\5_jasmine-demo_jquery\SpecRunner.html" />
     <Content Include="js\jasmine\lib\jasmine-1.3.1\jasmine-html.js" />

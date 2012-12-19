@@ -704,8 +704,8 @@
                             });
                         
                             it('should do something', function () {
-                                fixture.myjQueryPlugin();
-                                expect(fixture).toSomething();
+                                fixture.myPluging();
+                                expect(fixture).toBeSomething();
                             });
                         });
                         ```
@@ -713,28 +713,45 @@
                     </section>
 
                     <section data-markdown>
-                        ## Dirty Solution
+                        ## Uncomfortable Solution
                         <small>work directly on DOM</small>
-                        
+                            
+                        ```javascript contenteditable
                         describe('my jQuery plugin', function () {
                         
                             beforeEach(function () {
                                 $('#fixture').remove();
-                                $('body').append('<div id="fixture">some HTML code here</div>');
+                                $('body').append('&lt;div id=&quot;fixture&quot;&gt;HTML&lt;/div&gt;');
                             });
                         
                             it('should do something', function () {
-                                $('#fixture').myjQueryPlugin();
-                                expect($('#fixture')).toSomething();
+                                $('#fixture').myPluging();
+                                expect($('#fixture')).toBeSomething();
                             });
                         });
+                        ```
                     </section>
                     
                     <section data-markdown>
                         ## jasmine-jquery
-                        <small>TODO</small>
+                        <small>custom matchers, HTML/style/JSON fixtures, event spies</small>
                         
-                        https://github.com/velesin/jasmine-jquery
+                        ```javascript contenteditable
+                        describe('my jQuery plugin', function () {
+
+                            beforeEach(function() {
+                                jasmine.getFixtures().fixturesPath = './';
+                                jasmine.getFixtures().load('jquery.myPlugin.spec.html');
+                            });
+
+                            it('should do something', function() {
+
+                                var $div = $('#helloWorld').myPlugin();
+                                expect($div).toHaveClass("newClass");
+                            });
+                        });
+                        ```
+                        <small class="mini"><a href="js/5_jasmine-demo_jquery/SpecRunner.html" target="blank">Demo</a></small>
                     </section>
 
                     <section data-markdown>
