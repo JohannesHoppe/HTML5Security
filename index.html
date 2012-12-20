@@ -684,9 +684,9 @@
                         comes without tools to set up HTML fixtures
                         
                         <br><br>
-                            <small class="miniR">Definition:  
-                            A test fixture is a fixed state of a set of  
-                            objects used as a baseline for running tests.</small>
+                        <small class="miniR">Definition:  
+                        A test fixture is a fixed state of a set of  
+                        objects used as a baseline for running tests.</small>
                     </section>
 
                     <section data-markdown>
@@ -712,7 +712,7 @@
 
                     <section data-markdown>
                         ## Clumsy Solution
-                        <small>work directly on DOM</small>
+                        <small>directly append to/remove from DOM</small>
                             
                         ```javascript contenteditable
                         describe('my jQuery plugin', function () {
@@ -756,6 +756,37 @@
                         ## TTD → BDD
                     </section>
                     
+                    <section data-markdown>
+                        ## Spies
+                        <small>test behaviour</small>
+                        
+                        ```javascript contenteditable small
+                        describe('Garfield', function () {
+                            describe('when told to be nice', function() {
+
+                                var garfield;
+                                beforeEach(function() {
+                                    garfield = new Garfield();
+                                    spyOn(garfield, 'goToFridgeAndEatPizza').andCallThrough();
+                                });
+
+                                it('should answer with ok', function() {
+                                    var answer = garfield.beNice();
+                                    expect(answer).toEqual("ok");
+                                });
+
+                                it('should steal pizza', function () {
+                                    garfield.beNice();
+                                    expect(garfield.goToFridgeAndEatPizza).toHaveBeenCalled();
+                                });
+                            });
+                        });
+                        ```
+                        <small class="miniR">A spy can stub any function and tracks calls to it and all arguments.</small> 
+                        
+                        <small class="mini"><a href="js/6_jasmine-demo_spies/SpecRunner.html" target="blank">Demo</a></small>
+                    </section>
+                
                 </section>
                 
 
