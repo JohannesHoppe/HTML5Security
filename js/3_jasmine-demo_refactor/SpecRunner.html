@@ -19,7 +19,6 @@
 
             var jasmineEnv = jasmine.getEnv();
 
-            jasmineEnv.updateInterval = 1000;
             jasmineEnv.addReporter(htmlReporter);
             jasmineEnv.specFilter = function (spec) {
                 return htmlReporter.specFilter(spec);
