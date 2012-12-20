@@ -1,4 +1,6 @@
-﻿describe('Garfield', function () {
+﻿/// <reference path="garfield.js" />
+
+describe('Garfield', function () {
 
     it('should tell his name', function () {
         expect(new Garfield().getName()).toEqual("Garfield");

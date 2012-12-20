@@ -1,4 +1,6 @@
-﻿describe("saveFormat", function () {
+﻿/// <reference path="saveFormat.js" />
+
+describe("saveFormat", function () {
 
     var original = '{0} - {1} - {2}';
 

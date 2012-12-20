@@ -1,4 +1,8 @@
-describe("Player", function() {
+/// <reference path="../src/Player.js" />
+/// <reference path="../src/Song.js" />
+/// <reference path="SpecHelper.js" />
+
+describe("Player", function () {
   var player;
   var song;
 
