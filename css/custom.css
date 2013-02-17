@@ -1,25 +1,10 @@
-﻿img 
-{
-    border: none !important;
+﻿/* styles that are specific for this presentation */
 
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important;
-    
-    background-color: transparent !important;
-}
-
-.nowrap 
-{
+.nowrap {
     white-space: nowrap;
 }
 
-.reveal ul {
-    list-style-type: none;
-}
-
-.pesentation-details 
-{
+.pesentation-details {
     position: absolute;
     left: 10px;
     bottom: 5px;
@@ -27,23 +12,19 @@
     font-size: 0.8em;
 }
 
-.pesentation-details a 
-{
+.pesentation-details a {
     color: #51483D;
     text-decoration: none;
 }
 
-.pesentation-details a:hover 
-{
+.pesentation-details a:hover {
     color: #8B7C69;
 }
 
-.key 
-{
+.key {
     position: relative;
     bottom: 5px;
     display: inline-block;
-    font: 20px monospace !important;
     line-height: 30px;
     min-width: 30px;
     color: #000;
@@ -54,16 +35,14 @@
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
     vertical-align: sub !important;
-    margin: 0px 7px !important;
+    margin: 0 7px !important;
 }
 
 .alert .reveal .state-background {
     background: rgba( 200, 50, 30, .7 );
 }
 
-mustache,
-señorMustache
-{
+mustache {
     display: block;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -74,19 +53,13 @@ señorMustache
     font-weight: bold;
 }
 
-señorMustache {
-    margin-top: 100px;
-    font-size: 5em;    
-}
-
 blockquote {
     margin-top: 40px !important;
-    background-color: white !important;
+    box-shadow: none;
 }
 
 ol {
     margin: 40px 0 0 130px !important;
-    color: #494D4D;
 }
 
 small.mini {
