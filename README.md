@@ -1,3 +1,4 @@
+![Logo](https://raw.github.com/JohannesHoppe/JsBestPractices/master/images/logo_big.png)
 # JavaScript Best Practices
 
 A collection of tools, patterns and conventions I recommend for professional JS development.
