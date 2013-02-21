@@ -598,7 +598,7 @@
                             });
 
                             it("should encode injected content", function () {
-                                var expected = 'A - &amp;lt;b&amp;gt;TEST&amp;lt;/b&amp;gt; - C';
+                                var expected = 'A - &lt;b&gt;TEST&lt;/b&gt; - C';
                                 var formated = saveFormat(original,'A','&lt;b&gt;TEST&lt;/b&gt;','C');
                                 expect(formated).toEqual(expected);
                             });
@@ -626,7 +626,7 @@
 
                             $(arguments).each(function (i, item) {
                                 if (i > 0) {
-                                    item = ($('&lt;div/&gt;').text(item).html());
+                                    item = ($('<div/>').text(item).html());
                                     txt = txt.replace("{" + (i - 1) + "}", item);
                                 }
                             });
@@ -643,7 +643,7 @@
                         ```javascript contenteditable
                         
                         function htmlEncode(input) {
-                            return ($('&lt;div/&gt;').text(input).html());
+                            return ($('<div/>').text(input).html());
                         }
                         
                         var saveFormat = function(txt) {
@@ -668,7 +668,7 @@
                         ```javascript contenteditable
                         
                         function htmlEncode(input) {
-                            return ($('&lt;div/&gt;').text(input).html());
+                            return ($('<div/>').text(input).html());
                         }
                         
                         var saveFormat = function() {
