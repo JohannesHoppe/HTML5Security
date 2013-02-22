@@ -1,7 +1,7 @@
 ﻿/// <reference path="saveFormat.js" />
 /// <reference path="../jquery.js" />
 
-describe("saveFormat", function () {
+describe("saveFormat_refactor", function () {
 
     var original = '{0} - {1} - {2}';
 
