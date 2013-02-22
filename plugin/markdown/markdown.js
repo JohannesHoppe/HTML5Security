@@ -1,6 +1,6 @@
 // From https://gist.github.com/1343518
 // Modified by Hakim to handle Markdown indented with tabs
-(function(){
+(function() {
 
     if( typeof Showdown === 'undefined' ) {
         throw 'The reveal.js Markdown plugin requires Showdown to be loaded';
@@ -26,6 +26,13 @@
         else if( leadingWs > 1 ) {
             text = text.replace( new RegExp('\\n? {' + leadingWs + '}','g'), '\n' );
         }
+
+        // TODO: HACKED
+        // remove double-encoded HTML entities
+        text = text.replace(/_AMP_/g, "&");
+        text = text.replace(/_LT_/g, "<");
+        text = text.replace(/_GT_/g, ">");
+        text = text.replace(/_QUOT_/g, "\"");
 
         section.innerHTML = (new Showdown.converter()).makeHtml(text);
 
