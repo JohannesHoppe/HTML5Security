@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Enabled>false</Enabled>
+  <Enabled>true</Enabled>
   <ErrorCategory>Warning</ErrorCategory>
   <TODOEnabled>false</TODOEnabled>
   <TODOCategory>Task</TODOCategory>
@@ -61,7 +61,7 @@
           <string>browser</string>
         </key>
         <value>
-          <boolean>false</boolean>
+          <boolean>true</boolean>
         </value>
       </item>
       <item>
@@ -405,7 +405,7 @@
           <string>onevar</string>
         </key>
         <value>
-          <boolean>true</boolean>
+          <boolean>false</boolean>
         </value>
       </item>
       <item>
@@ -621,7 +621,7 @@
           <string>white</string>
         </key>
         <value>
-          <boolean>true</boolean>
+          <boolean>false</boolean>
         </value>
       </item>
       <item>
@@ -681,15 +681,20 @@
         </value>
       </item>
     </BoolOptions2>
-    <ErrorOnUnused>true</ErrorOnUnused>
-    <IndentSize>4</IndentSize>
-    <MaxLength>90</MaxLength>
+    <ErrorOnUnused>false</ErrorOnUnused>
+    <IndentSize xsi:nil="true" />
+    <MaxLength xsi:nil="true" />
     <MaxComplexity xsi:nil="true" />
     <MaxDepth xsi:nil="true" />
     <MaxStatements xsi:nil="true" />
     <MaxParams xsi:nil="true" />
-    <SelectedLinter>JSLint</SelectedLinter>
+    <SelectedLinter>JSHint</SelectedLinter>
     <FindTodos>false</FindTodos>
+    <PreDefined>
+      <string>define</string>
+      <string>require</string>
+      <string>requirejs</string>
+    </PreDefined>
   </JSLintOptions>
   <BuildFileTypes>JS</BuildFileTypes>
   <SaveFileTypes>JS</SaveFileTypes>
