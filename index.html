@@ -266,7 +266,7 @@
                         ## Coding conventions
                         
                         <ol>
-                            <li class="fragment">intentation (4 spaces!)</li>
+                            <li class="fragment">indentation (4 spaces!)</li>
                             <li class="fragment">curly braces everywhere</li>
                             <li class="fragment">semicolons everywhere</li>    
                             <li class="fragment">constructor functions: UpperCamelCase</li>   
@@ -438,15 +438,15 @@
                         
                         <ul class="model jasmine">
                             <li class="fragment">
-                                <span>&nbsp; BDD-style &nbsp;</span>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;BDD-style&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <small>similar to JSpec or RSpec,<br>created by authors of jsUnit and Screw.Unit</small>
                             </li>
                             <li class="fragment">
-                                <span>independent</span>
+                                <span>&nbsp;independent&nbsp;</span>
                                 <small>from any browser, DOM,<br>framework or host language</small>
                             </li>
                             <li class="fragment">
-                                <span>&nbsp; integrates &nbsp;&nbsp;</span>
+                                <span>&nbsp;&nbsp;&nbsp;integrates&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <small>into continuous build systems</small>
                             </li>
                         </ul>
@@ -456,24 +456,24 @@
                         ## Jasmine Bootstrap
                         
                         ```html contenteditable small
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                        &lt;head&gt;
-                            &lt;title&gt;Jasmine Spec Runner&lt;/title&gt;
+                        _LT_!DOCTYPE html_GT_
+                        _LT_html_GT_
+                        _LT_head_GT_
+                            _LT_title_GT_Jasmine Spec Runner_LT_/title_GT_
 
-                            &lt;link rel=&quot;stylesheet&quot; href=&quot;lib/jasmine-1.3.1/jasmine.css&quot; /&gt;
-                            &lt;script src=&quot;lib/jasmine-1.3.1/jasmine.js&quot;&gt;&lt;/script&gt;
-                            &lt;script src=&quot;lib/jasmine-1.3.1/jasmine-html.js&quot;&gt;&lt;/script&gt;
+                            _LT_link rel=_QUOT_stylesheet_QUOT_ href=_QUOT_lib/jasmine-1.3.1/jasmine.css_QUOT_ /_GT_
+                            _LT_script src=_QUOT_lib/jasmine-1.3.1/jasmine.js_QUOT__GT__LT_/script_GT_
+                            _LT_script src=_QUOT_lib/jasmine-1.3.1/jasmine-html.js_QUOT__GT__LT_/script_GT_
 
-                            &lt;!-- include source files here... --&gt;
-                            &lt;script src=&quot;src/Player.js&quot;&gt;&lt;/script&gt;
-                            &lt;script src=&quot;src/Song.js&quot;&gt;&lt;/script&gt;
+                            _LT_!-- include source files here... --_GT_
+                            _LT_script src=_QUOT_src/Player.js_QUOT__GT__LT_/script_GT_
+                            _LT_script src=_QUOT_src/Song.js_QUOT__GT__LT_/script_GT_
 
-                            &lt;!-- include spec files here... --&gt;
-                            &lt;script src=&quot;spec/SpecHelper.js&quot;&gt;&lt;/script&gt;
-                            &lt;script src=&quot;spec/PlayerSpec.js&quot;&gt;&lt;/script&gt;
+                            _LT_!-- include spec files here... --_GT_
+                            _LT_script src=_QUOT_spec/SpecHelper.js_QUOT__GT__LT_/script_GT_
+                            _LT_script src=_QUOT_spec/PlayerSpec.js_QUOT__GT__LT_/script_GT_
 
-                            &lt;script&gt;
+                            _LT_script_GT_
 
                                 (function () {
 
@@ -492,13 +492,13 @@
                                         jasmineEnv.execute();
                                     };
                                 })();
-                            &lt;/script&gt;
+                            _LT_/script_GT_
 
-                        &lt;/head&gt;
+                        _LT_/head_GT_
 
-                        &lt;body&gt;
-                        &lt;/body&gt;
-                        &lt;/html&gt;
+                        _LT_body_GT_
+                        _LT_/body_GT_
+                        _LT_/html_GT_
                         ```
                     </section>
 
@@ -554,7 +554,7 @@
                         beforeEach(function () {
                             this.addMatchers({
                                 isACat: function () {
-                                    return this.actual.isFluffy() && this.actual.isLazy();
+                                    return this.actual.isFluffy() _AMP__AMP_ this.actual.isLazy();
                                 }
                             });
                         });
@@ -598,8 +598,8 @@
                             });
 
                             it("should encode injected content", function () {
-                                var expected = 'A - &lt;b&gt;TEST&lt;/b&gt; - C';
-                                var formated = saveFormat(original,'A','&lt;b&gt;TEST&lt;/b&gt;','C');
+                                var expected = 'A - _AMP_lt;b_AMP_gt;TEST_AMP_lt;/b_AMP_gt; - C';
+                                var formated = saveFormat(original, 'A', '_LT_b_GT_TEST_LT_/b_GT_', 'C');
                                 expect(formated).toEqual(expected);
                             });
                         });
@@ -625,8 +625,8 @@
                         var saveFormat = function(txt) {
 
                             $(arguments).each(function (i, item) {
-                                if (i > 0) {
-                                    item = ($('<div/>').text(item).html());
+                                if (i _GT_ 0) {
+                                    item = ($('_LT_div/_GT_').text(item).html());
                                     txt = txt.replace("{" + (i - 1) + "}", item);
                                 }
                             });
@@ -643,13 +643,13 @@
                         ```javascript contenteditable
                         
                         function htmlEncode(input) {
-                            return ($('<div/>').text(input).html());
+                            return ($('_LT_div/_GT_').text(input).html());
                         }
                         
                         var saveFormat = function(txt) {
 
                             $.each(arguments, function (i, item) {
-                                if (i > 0) {
+                                if (i _GT_ 0) {
                                     item = htmlEncode(item);
                                     txt = txt.replace("{" + (i - 1) + "}", item);
                                 }
@@ -668,7 +668,7 @@
                         ```javascript contenteditable
                         
                         function htmlEncode(input) {
-                            return ($('<div/>').text(input).html());
+                            return ($('_LT_div/_GT_').text(input).html());
                         }
                         
                         var saveFormat = function() {
@@ -709,14 +709,15 @@
                         
                             var fixture;
                             beforeEach(function () {
-                                fixture = $('<div>some HTML code here</div>');
+                                fixture = $('_LT_div_GT_some HTML code here_LT_/div_GT_');
                             });
                         
                             it('should do something', function () {
-                                fixture.myPluging();
-                                expect(fixture).toBeSomething();
+                                fixture.myPlugin();
+                                expect(fixture).toHaveClass("newClass");
                             });
                         });
+                        jasmine.getEnv().execute();
                         ```
                         <small>... only works for trivial plugins!</small>
                     </section>
@@ -730,14 +731,15 @@
                         
                             beforeEach(function () {
                                 $('#fixture').remove();
-                                $('body').append('&lt;div id=&quot;fixture&quot;&gt;HTML&lt;/div&gt;');
+                                $('body').append('_LT_div id=_QUOT_fixture_QUOT__GT_HTML_LT_/div_GT_');
                             });
                         
                             it('should do something', function () {
-                                $('#fixture').myPluging();
-                                expect($('#fixture')).toBeSomething();
+                                $('#fixture').myPlugin();
+                                expect($('#fixture')).toHaveClass("newClass");
                             });
                         });
+                        jasmine.getEnv().execute();
                         ```
                     </section>
                     
@@ -748,17 +750,18 @@
                         ```javascript contenteditable
                         describe('my jQuery plugin', function () {
 
-                            beforeEach(function() {
-                                jasmine.getFixtures().fixturesPath = './';
-                                jasmine.getFixtures().load('jquery.myPlugin.spec.html');
-                            });
+                           beforeEach(function() {
+                               jasmine.getFixtures().fixturesPath='js/5_jasmine-demo_jquery';
+                               jasmine.getFixtures().load('jquery.myPlugin.spec.html');
+                           });
 
-                            it('should do something', function() {
-
-                                var $div = $('#helloWorld').myPlugin();
-                                expect($div).toHaveClass("newClass");
-                            });
+                           it('should do something', function() {
+                        
+                               var $div = $('#helloWorld').myPlugin();
+                               expect($div).toHaveClass("newClass");
+                           });
                         });
+                        jasmine.getEnv().execute();
                         ```
                         <small class="mini"><a href="js/5_jasmine-demo_jquery/SpecRunner.html" target="blank">Demo</a></small>
                     </section>
@@ -792,6 +795,7 @@
                                 });
                             });
                         });
+                        jasmine.getEnv().execute();
                         ```
                         <small class="miniR">A spy can stub any function and tracks calls to it and all arguments.</small> 
                         
@@ -828,6 +832,9 @@
         <script src="js/jquery.js"></script>
         <script src="js/jasmine/lib/jasmine-1.3.1/jasmine.js"></script>
         <script src="js/jasmine/lib/jasmine-1.3.1/jasmine.console_reporter.js"></script>
+        <script src="js/jasmine/lib/jasmine-jquery.js"></script>
+        <script src="js/5_jasmine-demo_jquery/jquery.myPlugin.js"></script>
+        <script src="js/6_jasmine-demo_spies/garfield.js"></script>
         <script>
 
             require(['jquery'], function (jquery) {
