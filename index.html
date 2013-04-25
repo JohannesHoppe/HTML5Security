@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="de">
 
     <head>
         <meta charset="utf-8">
@@ -42,25 +42,39 @@
 
                 <section>
                     <img src="images/logo_big.png" width="75%" style=""/>
-                    <h1 class="nowrap" style="font-size: 2.5em;">Security&nbsp;</h1>
+                    <h1 class="nowrap" style="font-size: 2.5em;">&nbsp;Security</h1>
                     <br>
                     <br>
-                    <small class="hidePrint">Navigate with <span class="key">Esc</span>, <span class="key">→</span> and <span class="key">↓</span></small>
-                </section>
-                      
-                <!--
-                <section data-markdown>
-                    ![just a joke](images/js_good_parts.jpg)
-                    
-                    <small>;-)</small>
-                </section>
-                -->
+                    <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>
+                </section>             
                 
                 <section data-markdown>
-                    # My Goal
+                    # Ziel
                     
-                    Higher code qualitiy. Pragmatic solutions.  
-                    No fancy stuff.                          
+                    Angriffsvektoren aufzeigen.  
+                    Strategien besprechen.  
+                    Mehr nicht!  
+                </section> 
+                
+                <section>
+                    
+                    <section data-markdown>
+                        # XSS
+                        <small>Eingeschleuster JavaScript-Code</small>
+                        
+                        ![tools](images/bug.png)
+                    </section>
+                
+                    <section  data-markdown>
+                        ## Oldies but Goldies
+                         
+                        <br>
+                        <a href="examples/XSS-DOM-based/index.html#irgendwas%20wurde%20irgendwie%gespeichert" target="XSS-DOM-based">index.html<red>#irgendwas%20wurde%20irgendwie%gespeichert</red></a> 
+
+                        <a href="javascript:r(['js/showSource'], function (s) { s.showSource('#XSS-DOM-based'); })" title="Test">Klick</a>
+                            
+                        <iframe id="XSS-DOM-based" name="XSS-DOM-based"></iframe>
+                    </section>
                 </section>
 
                 <section>
@@ -86,7 +100,7 @@
                     <section data-markdown>
                         # Know the<br>pitfalls
                         
-                        ![pitfalls](images/banana_peel.png)
+                        
                     </section>
                 
                     <section data-markdown>
@@ -128,7 +142,8 @@
         
         <!-- delicious libs for some live hacking -->
         <script src="js/require.js"></script>
-        <script src="js/jquery.js"></script>
+        <script src="js/jquery.js"></script> 
+        <script src="js/showSource.js"></script>
         <script>
 
             require(['jquery'], function (jquery) {
