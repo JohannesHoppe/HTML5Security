@@ -1,7 +1,7 @@
 ![Logo](https://raw.github.com/JohannesHoppe/HTML5Security/master/images/logo_big.png)
-<h1 style="text-align:center;font-size:50pt;">Security</h1>
+# HTML5Security
 
-HTML5 and JavaScript Security (German)
+HTML5Security
 
 #[&nbsp;&nbsp;&nbsp;&raquo; Start the presentation](http://johanneshoppe.github.com/HTML5Security/)
 
