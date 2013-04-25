@@ -1,5 +1,5 @@
 ﻿requirejs.config({
-    enforceDefine: true,
+    //enforceDefine: true,
     baseUrl: "js",
     paths: {
         'jquery': 'jquery-1.9.1'

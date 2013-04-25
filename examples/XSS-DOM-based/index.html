@@ -1,9 +1,21 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>DOM Based XSS</title>
+    <title>DOM Based XSS</title>    
+
+    <script src="../../js/jquery-1.9.1.min.js"></script>
+    <script src="../../js/jquery.notifier.js"></script>
 </head>
 <body>
+         
+    test 
+    <script>
+        var message = window.location.hash;
+        if (message) {
+        
+            Notifier.success('User registration successful');
+        }
+    </script>
 
 </body>
 </html>

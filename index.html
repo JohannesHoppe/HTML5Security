@@ -65,15 +65,17 @@
                         ![tools](images/bug.png)
                     </section>
                 
-                    <section  data-markdown>
+                    <section data-markdown>
                         ## Oldies but Goldies
                          
                         <br>
                         <a href="examples/XSS-DOM-based/index.html#irgendwas%20wurde%20irgendwie%gespeichert" target="XSS-DOM-based">index.html<red>#irgendwas%20wurde%20irgendwie%gespeichert</red></a> 
-
-                        <a href="javascript:r(['js/showSource'], function (s) { s.showSource('#XSS-DOM-based'); })" title="Test">Klick</a>
-                            
-                        <iframe id="XSS-DOM-based" name="XSS-DOM-based"></iframe>
+                           
+                        ```html contenteditable
+                        <span data-show-source="examples/XSS-DOM-based/index.html"></span>
+                        ```
+                             
+                        <!--<iframe id="XSS-DOM-based" name="XSS-DOM-based" src="examples/XSS-DOM-based/index.html#irgendwas%20wurde%20irgendwie%gespeichert"></iframe>-->
                     </section>
                 </section>
 
@@ -85,7 +87,7 @@
                         ![tools](images/tool.png)
                     </section>
                 
-                    <section  data-markdown>
+                    <section data-markdown>
                         * Visual Studio 2010/2012
                         * [JScript Editor Extensions](http://visualstudiogallery.msdn.microsoft.com/872d27ee-38c7-4a97-98dc-0d8a431cc2ed)
                         * [Resharper 7.1](http://www.jetbrains.com/resharper/whatsnew/#javascript)
@@ -140,14 +142,15 @@
         <script src="js/reveal.min.js"></script> 
         
         <!-- delicious libs for some live hacking -->
-        <script src="js/require.js"></script>
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/require.js"></script> 
+        <script src="js/require.config.js"></script>
         <script>
 
-            require(['jquery', 'showSource'], function (jquery, showSource) {
+            require(['jquery'], function ($) {
 
                 // tasty hack to get back the old global $
-                window.$ = window.jquery = jquery;
-                window.showSource = showSource;
+                //window.$ = window.jquery = jquery;
 
                 // start print page if print-pdf link was clicked
                 $(function () {
@@ -176,6 +179,7 @@
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
+                    { src: 'plugin/showSource/showSource.js' },
                     { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },

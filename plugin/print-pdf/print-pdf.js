@@ -30,7 +30,7 @@ if( slideFile.match( /\.pdf$/gi ) === null ) {
 	slideFile += '.pdf';
 }
 
-console.log( 'Printing PDF...' );
+//console.log( 'Printing PDF...' );
 
 page.open( revealFile, function( status ) {
 	console.log( 'Printed succesfully' );
