@@ -1,4 +1,5 @@
 ﻿/* styles that are specific for this presentation */
+/* ReSharper disable UnknownHtmlTag */
 
 .nowrap {
     white-space: nowrap;
@@ -33,15 +34,20 @@
     letter-spacing: 0;
     border-radius: 10px;
     background: #fff;
+    box-shadow: #000000 0 2px 5px;
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
     vertical-align: sub !important;
     margin: 0 7px !important;
 }
 
+/*
 .alert .reveal .state-background {
+    background: #c8321e;
     background: rgba( 200, 50, 30, .7 );
 }
+*/
 
+/*
 mustache {
     display: block;
     -webkit-transform: rotate(90deg);
@@ -52,6 +58,7 @@ mustache {
     font-size: 2.5em;
     font-weight: bold;
 }
+*/
 
 blockquote {
     margin-top: 40px !important;
@@ -76,7 +83,9 @@ small.miniR {
     width: 70%;
 }
 
-red { color: brown; }
+red {
+    color: brown;
+}
 
 ul.model {
     margin-top: 30px;
@@ -86,11 +95,11 @@ ul.model li {
     color: #494D4D
 }
 
-ul.model span
-{
+ul.model span {
     padding: 5px !important;
     border-radius: 10px;
     background: #fff;
+    box-shadow: #000000 0 2px 5px;
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
     
     margin: 7px;
@@ -109,26 +118,22 @@ code.small {
     max-height: 500px;
 }
 
+/*
 .reveal .state-background {
     background-image: url('../images/pixel.png');
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 454px 454px;
 }
-
-.jasmine .reveal .state-background {
-    background-image: url('../images/jasmine_logo_bg.png');
-    
-    -webkit-transition: background-image 0.8s linear;
-    -moz-transition: background-imaeg 0.8s linear;
-    -o-transition: background-image 0.8s linear;
-    transition: background-image 0.8s linear;
-}
+*/
 
 iframe.spec {
     
     height: 400px;
     width: 600px;
     border: 1px solid silver;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px; 
+    box-shadow: #000000 0 2px 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
 }
+
+/* ReSharper restore UnknownHtmlTag */
