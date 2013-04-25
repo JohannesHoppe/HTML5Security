@@ -137,19 +137,17 @@
         </div>
 
         <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.min.js"></script>
-        
+        <script src="js/reveal.min.js"></script> 
         
         <!-- delicious libs for some live hacking -->
         <script src="js/require.js"></script>
-        <script src="js/jquery.js"></script> 
-        <script src="js/showSource.js"></script>
         <script>
 
-            require(['jquery'], function (jquery) {
+            require(['jquery', 'showSource'], function (jquery, showSource) {
 
                 // tasty hack to get back the old global $
                 window.$ = window.jquery = jquery;
+                window.showSource = showSource;
 
                 // start print page if print-pdf link was clicked
                 $(function () {
