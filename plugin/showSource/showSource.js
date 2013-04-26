@@ -1,45 +1,30 @@
 ﻿(function ($) {
 
-    var doubleEncodeHTMLentities = function (text) {
+    var startSnip = "<!--START-->";
+    var stopSnip = "<!--STOP-->";
 
-        text = text.replace(/&/g, "_AMP_");
-        text = text.replace(/</g, "_LT_");
-        text = text.replace(/>/g, "_GT_");
-        text = text.replace(/"/g, "_QUOT_");
-
-        return text;
+    var extractSnippet = function(data) {
+        var match = data.match(startSnip + "([^]*?)" + stopSnip);
+        return match[1].trim();
     };
 
-    var replaceSection = function(section) {
-        $(section).find('span[data-show-iframe-source]').each(function() {
+    var replaceCode = function() {
+        $(document.body).find('code[data-show-source]').each(function () {
 
-            var target = $(this).data('show-iframe-source');
-            var myOwnHtml = this.outerHTML;
+            var code = this;
+            var target = $(this).data('show-source');
+            
+            $.get(target).done(function (data) {
 
-            var iframeContent = $(target).contents().find('body').html();
-
-            if (iframeContent) {
-                iframeContent = doubleEncodeHTMLentities(iframeContent).trim();
-            } else {
-                iframeContent = "error while parsing HTML";
-            }
-
-            var text = section.innerHTML;
-            text = text.replace(myOwnHtml, iframeContent);
-            section.innerHTML = text;
+                var snippet = extractSnippet(data);
+                var snippetEncoded = $('<div />').text(snippet).html();
+                code.innerHTML = snippetEncoded;
+            });
         });
     };
 
-    var showSource = function () {
-
-        var sections = document.querySelectorAll( '[data-markdown]' );
-
-        for (var i = 0, len = sections.length; i < len; i += 1) {
-            var section = sections[i];
-            replaceSection(section);
-        }
-    };
-
-    showSource();
+    $(function() {
+        replaceCode();
+    });
 
 })(window.jQuery);

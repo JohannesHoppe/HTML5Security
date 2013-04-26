@@ -8,14 +8,14 @@
 </head>
 <body>
          
-    test 
-    <script>
-        var message = window.location.hash;
-        if (message) {
-        
-            Notifier.success('User registration successful');
-        }
-    </script>
+<!--START--> 
+<script>
+    var message = window.location.hash;
+    if (message) {
+        Notifier.success(message);
+    }
+</script>
+<!--STOP-->
 
 </body>
 </html>
