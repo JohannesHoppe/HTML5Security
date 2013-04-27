@@ -68,14 +68,14 @@
                     <section data-markdown>
                         ## Oldies but Goldies
                          
-                        <br>
-                        <a href="examples/XSS-DOM-based/index.html#irgendwas%20wurde%20irgendwie%gespeichert" target="XSS-DOM-based">index.html<red>#irgendwas%20wurde%20irgendwie%gespeichert</red></a> 
-                           
+                        <a href="examples/XSS-DOM-based/index.html?message=Daten%20gespeichert" target="XSS-DOM-based" class="fragment">index.html<red>?message=Daten gespeichert &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</red></a>  
+                        <a href="examples/XSS-DOM-based/index.html?message=&lt;script&gt;alert('XSS')&lt;/script&gt;" target="XSS-DOM-based" class="fragment">index.html<red>?message=&lt;script&gt;alert('XSS')&lt;/script&gt;</red></a>  
+                        
                         ```javascript contenteditable data-show-source="examples/XSS-DOM-based/index.html"
                         loading source...
                         ```
                              
-                        <!--<iframe id="XSS-DOM-based" name="XSS-DOM-based" src="examples/XSS-DOM-based/index.html#irgendwas%20wurde%20irgendwie%gespeichert"></iframe>-->
+                        <iframe name="XSS-DOM-based" src="examples/XSS-DOM-based/index.html" style="width:100px;height:100px;"></iframe>
                     </section>
                 </section>
 

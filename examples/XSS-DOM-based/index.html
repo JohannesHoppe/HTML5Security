@@ -4,13 +4,14 @@
     <title>DOM Based XSS</title>    
 
     <script src="../../js/jquery-1.9.1.min.js"></script>
-    <script src="../../js/jquery.notifier.js"></script>
+    <script src="../../js/notifier.js"></script>
+    <script src="../../js/purl.js"></script>
 </head>
 <body>
          
 <!--START--> 
 <script>
-    var message = window.location.hash;
+    var message = $.url().param('message');
     if (message) {
         Notifier.success(message);
     }
