@@ -5,16 +5,29 @@
 
     var extractSnippet = function(data) {
         var match = data.match(startSnip + "([^]*?)" + stopSnip);
-        return match[1].trim();
+        
+        if (match != null) {
+            return match[1].trim();
+        }
+
+        // fallback, if no snippet was placed
+        return data;
+    };
+
+    var httpRequest = function(url) {
+        return $.ajax({
+            url: url,
+            dataType: "text"
+        });
     };
 
     var replaceCode = function() {
         $(document.body).find('code[data-show-source]').each(function () {
 
             var code = this;
-            var target = $(this).data('show-source');
+            var url = $(this).data('show-source');
             
-            $.get(target).done(function (data) {
+            httpRequest(url).done(function (data) {
 
                 var snippet = extractSnippet(data);
                 var snippetEncoded = $('<div />').text(snippet).html();
@@ -22,9 +35,24 @@
             });
         });
     };
+    
+    var insertHtml = function () {
+        $(document.body).find('div[data-insert-source]').each(function () {
+
+            var code = this;
+            var url = $(this).data('insert-source');
+
+            httpRequest(url).done(function (data) {
+
+                var snippet = extractSnippet(data).trim();
+                code.innerHTML = snippet;
+            });
+        });
+    };
 
     $(function() {
         replaceCode();
+        insertHtml();
     });
 
 })(window.jQuery);
