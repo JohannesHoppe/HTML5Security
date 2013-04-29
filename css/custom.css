@@ -87,6 +87,7 @@ red {
     color: brown;
 }
 
+/*
 ul.model {
     margin-top: 30px;
 }
@@ -111,6 +112,7 @@ ul.model span {
 ul.model.jasmine span {
     background-color: #9CD175;
 }
+*/
 
 code.small {
     font-size: 14px;
@@ -127,6 +129,7 @@ code.small {
 }
 */
 
+/*
 iframe.spec {
     
     height: 400px;
@@ -134,6 +137,43 @@ iframe.spec {
     border: 1px solid silver;
     box-shadow: #000000 0 2px 5px;
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+}
+*/
+
+/* example: formaction */
+.example_formaction form {
+    font-size: 0.8em;
+    padding: 20px;
+    text-align: right;
+    margin-right: 27%;
+    white-space: pre-line;
+    margin-top: -2em;
+}
+
+.example_formaction input {
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+.example_formaction button {
+    font-size: 0.6em;
+}
+
+.example_formaction input[type=text],
+.example_formaction input[type=password] {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.example_formaction input[type=submit],
+.example_formaction button {
+    font-weight: bold;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
 }
 
 /* ReSharper restore UnknownHtmlTag */

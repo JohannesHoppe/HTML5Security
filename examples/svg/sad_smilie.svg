@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50">
+  <defs><style><![CDATA[ text { font-size:6pt; } ]]></style></defs> 
+  <circle cx="20" cy="20" r="15" fill="yellow" stroke="black"/>
+  <circle cx="15" cy="15" r="2" fill="black" stroke="black"/>
+  <circle cx="25" cy="15" r="2" fill="black" stroke="black"/>
+  <path d="M 13 26 A 5 3 0 0 0 27 26" stroke="black" fill="none" stroke-width="2" transform="rotate(180, 20, 28)"/>
+  
+  <text x="11" y="50" id="display">Test</text>
+  <script>
+    alert(document.cookie);
+    document.getElementById('display').textContent = document.cookie;
+  </script>
+</svg>

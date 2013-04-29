@@ -53,8 +53,63 @@
                     
                     Angriffsvektoren aufzeigen.  
                     Strategien besprechen.  
-                    Mehr nicht!  
-                </section> 
+                    Mehr nicht!
+                </section>
+                    
+                <section>
+                    <section data-markdown>
+                        ## Neue HTML5 features
+                        <small>Neue Angriffsvektoren</small>
+                        
+                        <img src="images/html5-badge-all.png" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage">
+                    </section>
+                                 
+                    <section data-markdown class="example_formaction">
+                        ## Ein Formular
+
+                        <div data-insert-source="examples/formaction/clean.html"></div>
+                        
+                        ```javascript contenteditable data-show-source="examples/formaction/clean.html"
+                        loading source...
+                        ```
+                    </section> 
+
+                    <section data-markdown class="example_formaction">
+                        ## Formaction
+                         
+                        <div data-insert-source="examples/formaction/index.html"></div>
+                        
+                        ```javascript contenteditable data-show-source="examples/formaction/index.html"
+                        loading source...
+                        ```
+                    </section>
+                    
+                    <section data-markdown class="example_formaction">
+                        ## SVG
+                        <small>Presto, WebKit, Gecko und sogar Trident 9</small>
+                         
+                        <img src="examples/svg/smilie.svg" style="width:100px;height:100px;">
+
+                        ```javascript contenteditable data-show-source="examples/svg/smilie.svg"
+                        loading source...
+                        ```
+                    </section>
+                    
+                    <section data-markdown class="example_formaction">
+                        ## SVG
+                        <small>kann JavaScript enthalten!</small>
+                         
+                        <a href="examples/svg/sad_smilie.svg">
+                            <img src="examples/svg/sad_smilie.svg" style="width:440px;height:140px;margin:0;margin-left:35%">
+                        </a>
+
+                        ```html contenteditable data-show-source="examples/svg/sad_smilie.svg" small
+                        loading source...
+                        ```
+                    </section>
+
+                </section>
+                
                 
                 <section>
                     
@@ -76,7 +131,9 @@
                         ```
                              
                         <iframe name="XSS-DOM-based" src="examples/XSS-DOM-based/index.html" style="width:100px;height:100px;"></iframe>
-                    </section>
+                    </section> 
+                    
+
                 </section>
 
                 <section>
@@ -145,13 +202,16 @@
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/require.js"></script> 
         <script src="js/require.config.js"></script>
+        <script src="js/cookie.js"></script>
+
         <script>
 
             require(['jquery'], function ($) {
 
+                createCookie('secret', 'cookie value', 99);
+
                 // tasty hack to get back the old global $
                 //window.$ = window.jquery = jquery;
-
                 
                 // some dirty fixes
                 jquery("code[fragment]").addClass("fragment");
