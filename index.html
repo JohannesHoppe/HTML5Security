@@ -152,6 +152,11 @@
                 // tasty hack to get back the old global $
                 //window.$ = window.jquery = jquery;
 
+                
+                // some dirty fixes
+                jquery("code[fragment]").addClass("fragment");
+                jquery("code[small]").addClass("small");
+                
                 // start print page if print-pdf link was clicked
                 $(function () {
                     if (window.location.search.match(/print-pdf/gi)) {
