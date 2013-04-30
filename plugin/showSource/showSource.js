@@ -5,8 +5,8 @@
 
     var extractSnippet = function(data) {
         var match = data.match(startSnip + "([^]*?)" + stopSnip);
-        
-        if (match != null) {
+                  
+        if (!match) {
             return match[1].trim();
         }
 
