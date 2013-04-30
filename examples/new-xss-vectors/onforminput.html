@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>More vectors</title>    
+
+</head>
+<body>
+         
+<!--START--> 
+          
+<!-- Presto only: Form surveillance -->
+<form id=test onforminput=alert('XSS onforminput')>
+    <input>
+</form>
+<button form=test onformchange=alert('XSS onformchange')>X</button>
+
+<!--STOP-->
+
+</body>
+</html>
