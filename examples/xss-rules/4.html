@@ -1,0 +1,9 @@
+﻿# if(ID != 0)  { #
+
+<a href="javascript:DialogManager.ShowPartialDialog('@Url.Action("UserManagement", "Management")', { userId : '#= htmlEncode(ID) #' }, {title: '#= htmlEncode(Alias) #'})"#= htmlEncode(Alias) #</a>
+
+# } else { #
+
+#= htmlEncode(Alias) #
+
+# } #

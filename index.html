@@ -58,10 +58,10 @@
                     
                 <section>
                     <section data-markdown>
-                        ## Neue HTML5 features
+                        # Features
                         <small>Neue Angriffsvektoren</small>
                         
-                        <img src="images/html5-badge-all.png" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage">
+                        ![tools](images/tool.png)
                     </section>
                                  
                     <section data-markdown class="example_formaction">
@@ -100,7 +100,7 @@
                         <small>kann JavaScript enthalten!</small>
                          
                         <a href="examples/svg/sad_smilie.svg">
-                            <img src="examples/svg/sad_smilie.svg" style="width:440px;height:140px;margin:0;margin-left:35%">
+                            <img src="examples/svg/sad_smilie.svg" style="width:440px;height:140px;margin:0;margin-left:37%">
                         </a>
 
                         ```html contenteditable data-show-source="examples/svg/sad_smilie.svg" small
@@ -108,31 +108,12 @@
                         ```
                     </section> 
                     
-                    <section data-markdown>
-                        ## XSS everywhere
-                        <small>Blacklisten funktionieren einfach nicht</small>
-                                               
-                        ```html contenteditable data-show-source="examples/new-xss-vectors/onfocus.html"
-                        loading source...
-                        ```   
-                        
-                        ```html contenteditable data-show-source="examples/new-xss-vectors/onerror.html"
-                        loading source...
-                        ```
-                        
-                        ```html contenteditable data-show-source="examples/new-xss-vectors/onforminput.html"
-                        loading source...
-                        ```
-
-                        &raquo; Demo <a href="examples/new-xss-vectors/onfocus.html" target="_blank">1</a> <a href="examples/new-xss-vectors/onerror.html" target="_blank">2</a> <a href="examples/new-xss-vectors/onforminput.html" target="_blank">3</a>
-                    </section>   
-                    
                     <section data-markdown class="example_formaction">
                         ## Business as usual
-                        HTML5 es ist auch nicht schlimmer als HTML 4
+                        <small>HTML5 es ist auch nicht schlimmer als HTML 4</small>
                                      
                         <br>
-                        <small>Mehr: <a href="http://html5sec.org">http://html5sec.org</a></small>
+                        <small>[&raquo; http://html5sec.org](http://html5sec.org)</small>
                     </section>
 
                 </section>
@@ -158,51 +139,120 @@
                         ```
                              
                         <iframe name="XSS-DOM-based" src="examples/XSS-DOM-based/index.html" style="width:100px;height:100px;"></iframe>
-                    </section> 
-                    
-
-                </section>
-
-                <section>
+                    </section>  
                     
                     <section data-markdown>
-                        # Know Your<br>MS Tools
+                        ## Eval everywhere
+                        <small>Eval is evil</small>
+                                               
+                        ```html contenteditable data-show-source="examples/new-xss-vectors/onfocus.html"
+                        loading source...
+                        ```   
                         
-                        ![tools](images/tool.png)
-                    </section>
-                
-                    <section data-markdown>
-                        * Visual Studio 2010/2012
-                        * [JScript Editor Extensions](http://visualstudiogallery.msdn.microsoft.com/872d27ee-38c7-4a97-98dc-0d8a431cc2ed)
-                        * [Resharper 7.1](http://www.jetbrains.com/resharper/whatsnew/#javascript)
-                        * [JSHint](http://www.jshint.com/platforms/)
-                        * [Chutzpah](http://chutzpah.codeplex.com/)
-                        * [Firebug](https://getfirebug.com/) / F12
-                    </section>
-                </section>
-                
-                <section>
-                    
-                    <section data-markdown>
-                        # Know the<br>pitfalls
+                        ```html contenteditable data-show-source="examples/new-xss-vectors/onerror.html"
+                        loading source...
+                        ```
                         
-                        
-                    </section>
-                
-                    <section data-markdown>
-                        ## Implied globals
-                        <small>Forgetting var</small>
-                        
-                        ```javascript contenteditable
-                        var foo = function() {
-                            bar = 1;
-                        };
+                        ```html contenteditable data-show-source="examples/new-xss-vectors/onforminput.html"
+                        loading source...
                         ```
 
+                        <small>&raquo; Demo
+                        [1](examples/new-xss-vectors/onfocus.html)
+                        [2](a href="examples/new-xss-vectors/onerror.html)
+                        [3](examples/new-xss-vectors/onforminput.html)
+                        </small>
+                    </section>  
+
+                    <section data-markdown>
+                        # OWASP
+                        #### Open Web Application Security Project 
+                        <small><a href="https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet">XSS Filter Evasion Cheat Sheet</a></small>
+                        
+                        ```html contenteditable data-show-source="examples/unicode-xss/index.html"
+                        loading source...
+                        ```
+                        
+                        <small>[&raquo; Old IE Demo](examples/unicode-xss/index.html)</small>
+                    </section>  
+                    
+                    <section data-markdown>
+                        ## XSS Vorbeugen
+                    </section>
+                    
+                    <section data-markdown>
+                        # 1.
+                        Hier sollten dynamische  
+                        Daten niemals verwendet werden
+                        
+                        ```html contenteditable data-show-source="examples/xss-rules/1.html"
+                        loading source...
+                        ```
                     </section>
 
+                    <section data-markdown class="example_entities">
+                        # 2.
+                        HTML escape  
+                        dynamic data
+                        
+                        ```html contenteditable data-show-source="examples/xss-rules/2.html"
+                        loading source...
+                        ```
+
+                        <table>
+                            <tr><td class="first">&amp;</td>  <td>&rarr;</td> <td class="third">&amp;amp;</td></tr>
+                            <tr><td class="first">&lt;</td>  <td>&rarr;</td> <td class="third">&amp;lt;</td></tr>
+                            <tr><td class="first">&gt;</td>  <td>&rarr;</td> <td class="third">&amp;gt;</td></tr>
+                            <tr><td class="first">&quot</td> <td>&rarr;</td> <td class="third">&amp;quot;</td></tr>
+                            <tr><td class="first">&apos;</td><td>&rarr;</td> <td class="third">&amp;apos; / &amp;#39;</td></tr>
+                        </table>
+
+                    </section>
+                    
+                    <section data-markdown class="example_entities">
+                        # 3.
+                        Attribute escape  
+                        dynamic data
+                        
+                        ```html contenteditable data-show-source="examples/xss-rules/3.html"
+                        loading source...
+                        ```
+                        
+                        <table>
+                            <tr><td class="first">a-z A-Z 0-9</td>  <td>&rarr;</td> <td class="third">immun</td></tr>
+                            <tr><td class="first">, . - _</td>      <td>&rarr;</td> <td class="third">immun</td></tr>
+                            <tr><td class="first">Rest</td>         <td>&rarr;</td> <td class="third">&#xHH;</td></tr>
+                        </table>
+                    </section>
+                    
+                    <section data-markdown class="example_entities">
+                        # 4. DO NOT
+                        JavaScript escape  
+                        dynamic data 
+                          
+                        <br />  
+                        <ul style="font-size:0.8em;">
+                        <li class="fragment">HTML parser runs before the JavaScript parser!</li>
+                        <li class="fragment">you are doing it wrong</li>
+                        </ul>
+                    </section>    
+                    
+                    <section data-markdown class="example_entities">
+                        ## Das hier ist Alltag  
+                        <small>UserList.cshtml / Kendo UI Template</small>
+
+                        ```html contenteditable data-show-source="examples/xss-rules/4.html"
+                        loading source...
+                        ```
+                    </section>
+
+                    <section data-markdown>
+                        # ?
+                        
+                        Offensichtlich läuft beim Umgang  
+                        mit Daten etwas prinzipiell falsch!
+                    </section>
                 </section>
-                
 
                 <section data-markdown>
                     # Danke!
@@ -258,6 +308,8 @@
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
+                //minScale: 0.2,
+                //maxScale: 1.0,
                 controls: true,
                 progress: true,
                 history: true,

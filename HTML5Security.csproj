@@ -61,7 +61,11 @@
     <Content Include="examples\new-xss-vectors\onfocus.html" />
     <Content Include="examples\svg\sad_smilie.svg" />
     <Content Include="examples\svg\smilie.svg" />
+    <Content Include="examples\unicode-xss\index.html" />
     <Content Include="examples\XSS-DOM-based\index.html" />
+    <Content Include="examples\xss-rules\1.html" />
+    <Content Include="examples\xss-rules\2.html" />
+    <Content Include="examples\xss-rules\3.html" />
     <Content Include="images\bug.png" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\html5-badge-all.png" />

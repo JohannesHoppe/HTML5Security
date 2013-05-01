@@ -176,4 +176,17 @@ iframe.spec {
     border: 1px solid gray;
 }
 
+.example_entities table {
+   margin:auto;
+   font-size: 0.8em;
+}
+
+.example_entities table td.first {
+   font-weight: bold; 
+}
+
+.example_entities table td.third {
+   font-size: 0.8em; 
+}
+
 /* ReSharper restore UnknownHtmlTag */
