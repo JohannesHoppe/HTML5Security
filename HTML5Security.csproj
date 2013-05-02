@@ -70,6 +70,7 @@
     <Content Include="examples\xss-rules\2.html" />
     <Content Include="examples\xss-rules\3.html" />
     <Content Include="examples\xss-rules\4.html" />
+    <Content Include="images\attack_and_defense_labs.png" />
     <Content Include="images\codingHorror.png" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\hakin9.png" />
@@ -80,6 +81,7 @@
     <Content Include="images\icon_mustache.png" />
     <Content Include="images\icon_storage.png" />
     <Content Include="images\icon_tool.png" />
+    <Content Include="images\js-recon.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo_big.png" />
     <Content Include="images\pixel.png" />
