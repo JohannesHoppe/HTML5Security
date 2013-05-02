@@ -66,6 +66,7 @@
     <Content Include="examples\xss-rules\1.html" />
     <Content Include="examples\xss-rules\2.html" />
     <Content Include="examples\xss-rules\3.html" />
+    <Content Include="examples\xss-rules\4.html" />
     <Content Include="images\bug.png" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\html5-badge-all.png" />

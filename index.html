@@ -43,8 +43,8 @@
                 <section>
                     <img src="images/logo_big.png" width="75%" style=""/>
                     <h1 class="nowrap" style="font-size: 2.5em;">&nbsp;Security</h1>
-                    <br>
-                    <br>
+                    <br />
+                    <br />
                     <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>
                 </section>             
                 
@@ -61,7 +61,7 @@
                         # Features
                         <small>Neue Angriffsvektoren</small>
                         
-                        ![tools](images/tool.png)
+                        ![tools](images/icon_tool.png)
                     </section>
                                  
                     <section data-markdown class="example_formaction">
@@ -112,7 +112,7 @@
                         ## Business as usual
                         <small>HTML5 es ist auch nicht schlimmer als HTML 4</small>
                                      
-                        <br>
+                        <br />
                         <small>[&raquo; http://html5sec.org](http://html5sec.org)</small>
                     </section>
 
@@ -125,7 +125,7 @@
                         # XSS
                         <small>Eingeschleuster JavaScript-Code</small>
                         
-                        ![tools](images/bug.png)
+                        ![tools](images/icon_bug.png)
                     </section>
                 
                     <section data-markdown>
@@ -225,19 +225,19 @@
                         </table>
                     </section>
                     
-                    <section data-markdown class="example_entities">
+                    <section data-markdown>
                         # 4. DO NOT
                         JavaScript escape  
                         dynamic data 
                           
                         <br />  
                         <ul style="font-size:0.8em;">
-                        <li class="fragment">HTML parser runs before the JavaScript parser!</li>
-                        <li class="fragment">you are doing it wrong</li>
+                            <li class="fragment">HTML parser runs before the JavaScript parser!</li>
+                            <li class="fragment">you are doing it wrong</li>
                         </ul>
                     </section>    
                     
-                    <section data-markdown class="example_entities">
+                    <section data-markdown>
                         ## Das hier ist Alltag  
                         <small>UserList.cshtml / Kendo UI Template</small>
 
@@ -252,7 +252,82 @@
                         Offensichtlich läuft beim Umgang  
                         mit Daten etwas prinzipiell falsch!
                     </section>
-                </section>
+                </section>   
+                
+                <section>
+                    
+                    <section data-markdown>
+                        # Storage
+                        
+                        ![tools](images/icon_storage.png)
+                    </section>
+                    
+                    <section data-markdown>
+                        ## Egal 
+                        
+                        <br />
+                        <ul style="margin-left: 120px;">
+                            <li class="fragment">ob Cookies</li>
+                            <li class="fragment">ob Session Storage</li>
+                            <li class="fragment">ob Local Storage</li>
+                            <li class="fragment">ob WebSQL</li>
+                        </ul>
+                        
+                        <br />
+
+                        die Daten sind nicht vertrauenswürdig!
+                    </section>
+                    
+                    <section data-markdown>
+                        <h2 class="fragment">Resident XSS</h2>
+                        
+                        <span class="fragment">Daten aus einem Storage</span> <span class="fragment">+ XSS Schwachstelle</span>   
+                        
+                        <br/>
+                        <br/>
+                        <br/>
+                        <small>richtig fies!</small>
+                    </section>
+
+                    <section data-markdown>
+                        Vertraulichen Informationen  
+                        gehören in die SERVER-Session!
+                    </section>
+                    
+                    <section data-markdown>
+                        Session Storage bevorzugen!
+                    </section>
+                    
+                    <section data-markdown>
+                        ## WebSQL
+                        
+                        <br />
+                        SQL Injection:
+                        ```html contenteditable
+                        executeSql("SELECT foo FROM bar WHERE value=" + value);
+                        ```
+                        
+                        <br />
+                        Prepared Statement:
+                        ```html contenteditable
+                        executeSql("SELECT foo FROM bar WHERE value=?", [value]);
+                        ```
+                    </section>
+
+                </section> 
+            
+                <section>
+                    
+                    <section data-markdown>
+                        # Kommunikation
+                        
+                        ![tools](images/icon_storage.png)
+                    </section>
+            
+                </section> 
+               
+                
+                
 
                 <section data-markdown>
                     # Danke!
@@ -291,8 +366,8 @@
                 //window.$ = window.jquery = jquery;
                 
                 // some dirty fixes
-                jquery("code[fragment]").addClass("fragment");
-                jquery("code[small]").addClass("small");
+                $("code[fragment]").addClass("fragment");
+                $("code[small]").addClass("small");
                 
                 // start print page if print-pdf link was clicked
                 $(function () {
