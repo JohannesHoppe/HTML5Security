@@ -6,8 +6,9 @@
     <script src="../../js/jquery-1.9.1.js"></script>
     <script src="../../js/require.js"></script>
     <script src="../../js/require.config.js"></script>
-
+              
     <script>
+        requirejs.config({ baseUrl: "../../js/" });
         require(['/examples/jsonp/loadTweets.js']);
     </script>
  
@@ -17,9 +18,12 @@
 <!--START-->           
     <ul id="tweets" data-bind="foreach: results">
         <li>
-            <h2 data-bind="text: from_user"></h2>
+            <div>
+                <h1 data-bind="text: from_user"></h1>
+                <small data-bind="text: text">Loading...</small>
+            </div>
+            
             <img data-bind="attr: { src: profile_image_url }" />
-            <span data-bind="text: text">Loading...</span>
         </li>
     </ul>
 <!--STOP-->

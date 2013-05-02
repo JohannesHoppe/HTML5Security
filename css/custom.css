@@ -189,4 +189,53 @@ iframe.spec {
    font-size: 0.8em; 
 }
 
+.example_jsonp ul {
+    width: 500px;
+}
+
+.example_jsonp ul li {
+    clear: both;
+    padding: 20px 0 0 0;
+    border-top: 1px solid white;
+}
+
+.example_jsonp .demo_twitter {
+    margin: auto;
+    width: 600px;
+    height: 400px;
+     overflow-x: auto ;
+     overflow-y: scroll;
+}                           
+
+.example_jsonp ul div {
+    clear: both;
+}
+
+.example_jsonp ul div {
+    display: block;
+    width: 425px;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.example_jsonp ul h1 {
+    font-size: 0.5em;
+    display: block;
+    width: 300px;
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+.example_jsonp ul small {
+    font-size: 0.5em;
+}
+
+.example_jsonp ul img {
+    float: left;
+    width: 50px; 
+    margin: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 /* ReSharper restore UnknownHtmlTag */

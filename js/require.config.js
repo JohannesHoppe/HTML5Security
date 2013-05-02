@@ -1,6 +1,6 @@
 ﻿requirejs.config({
     //enforceDefine: true,
-    baseUrl: "/js",
+    baseUrl: "js",
     paths: {
         'jquery': 'jquery-1.9.1',
         'knockout': 'knockout-2.2.1',
