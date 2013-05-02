@@ -238,4 +238,8 @@ iframe.spec {
     margin-bottom: 10px;
 }
 
+.example_article img {
+    margin-left: 25% !important;
+}
+
 /* ReSharper restore UnknownHtmlTag */

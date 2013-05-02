@@ -56,6 +56,7 @@
     <Content Include="examples\css-expressions-reloaded\index.html" />
     <Content Include="examples\formaction\clean.html" />
     <Content Include="examples\formaction\index.html" />
+    <Content Include="examples\jsonp\jsonp_by_hand.html" />
     <Content Include="examples\jsonp\index.html" />
     <Content Include="examples\jsonp\loadTweets.js" />
     <Content Include="examples\new-xss-vectors\onforminput.html" />
@@ -69,6 +70,7 @@
     <Content Include="examples\xss-rules\2.html" />
     <Content Include="examples\xss-rules\3.html" />
     <Content Include="examples\xss-rules\4.html" />
+    <Content Include="images\codingHorror.png" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\html5-badge-all.png" />
     <Content Include="images\icon_bug.png" />
@@ -82,6 +84,7 @@
     <Content Include="images\pixel.png" />
     <Content Include="index.html" />
     <Content Include="js\cookie.js" />
+    <Content Include="js\domReady.js" />
     <Content Include="js\jquery-1.9.1.js" />
     <Content Include="js\jquery-1.9.1.min.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>

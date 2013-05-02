@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JSONP by hand</title>
+    <script src="../../js/jquery-1.9.1.js"></script>
+</head>
+<body>
+    
+    <pre id="output"></pre>  
+    
+<!--START--> 
+<script>
+    var foo = function(json) {
+        $('#output').text(JSON.stringify(json, undefined, 2));
+    }; 
+</script>
+    
+<script src="http://search.twitter.com/search.json?q=%23dnc13&callback=foo"></script>
+<!--STOP--> 
+
+</body> 
+</html>
