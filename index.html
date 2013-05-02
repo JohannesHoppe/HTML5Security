@@ -322,6 +322,19 @@
                         ## Kommunikation
                         
                         ![tools](images/icon_communication.png)
+                    </section>   
+                    
+                    <section data-markdown>
+                        ## Mashups!
+                           
+                        ```html contenteditable data-show-source="examples/jsonp/loadTweets.js"
+                        loading source...
+                        ```
+
+                        <div data-insert-source="examples/jsonp/index.html"></div>
+                        <div data-execute-script="examples/jsonp/loadTweets.js"></div>
+
+                        <small>[&raquo; Demo](examples/jsonp/index.html)</small> 
                     </section>
             
                 </section> 
@@ -355,7 +368,6 @@
         <script src="js/require.js"></script> 
         <script src="js/require.config.js"></script>
         <script src="js/cookie.js"></script>
-
         <script>
 
             require(['jquery'], function ($) {
@@ -376,6 +388,8 @@
                     }
                 });
             });
+            
+            require(['/examples/jsonp/loadTweets.js']);
         </script>
 
         <script>

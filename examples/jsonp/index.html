@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JSONP</title> 
+
+    <script src="../../js/jquery-1.9.1.js"></script>
+    <script src="../../js/require.js"></script>
+    <script src="../../js/require.config.js"></script>
+
+    <script>
+        require(['/examples/jsonp/loadTweets.js']);
+    </script>
+ 
+</head>
+<body>
+
+<!--START-->           
+    <ul id="tweets" data-bind="foreach: results">
+        <li>
+            <h2 data-bind="text: from_user"></h2>
+            <img data-bind="attr: { src: profile_image_url }" />
+            <span data-bind="text: text">Loading...</span>
+        </li>
+    </ul>
+<!--STOP-->
+
+</body>
+</html>
