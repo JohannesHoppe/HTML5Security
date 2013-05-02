@@ -278,14 +278,16 @@
                         die Daten sind nicht vertrauenswürdig!
                     </section>
                     
-                    <section data-markdown>
+                    <section>
                         <h2 class="fragment">Resident XSS</h2>
                         
-                        <span class="fragment">Daten aus einem Storage</span> <span class="fragment">+ XSS Schwachstelle</span>   
+                        <table border style="margin:auto;">
+                            <tr>
+                                <td class="fragment"><img src="images/icon_storage.png" title="Daten aus einem Storage" /></td>
+                                <td class="fragment"><img src="images/icon_bug.png" title="XSS Schwachstelle" /></td>
+                            </tr>
+                        </table>   
                         
-                        <br/>
-                        <br/>
-                        <br/>
                         <small>richtig fies!</small>
                     </section>
 
@@ -364,15 +366,33 @@
                          
                         <br/> 
                         <div class="fragment">
-                        <h2>CORS</h2>
-                        <small>Cross-Origin Resource Sharing &rarr; Access-Control-Allow-Origin: *</small>
+                            <h2>CORS</h2>
+                            <small>Cross-Origin Resource Sharing &rarr; Access-Control-Allow-Origin: *</small>
                         </div>
                           
                         <br/>
                         <div class="fragment">
-                        <h2>WebSockets</h2>
-                        <small>do what you want</small>
+                            <h2>WebSockets</h2>
+                            <small>do what you want</small>
                         </div>
+                    </section>
+                     
+                    <section data-markdown>
+                        ![Attack & Defense Labs](images/attack_and_defense_labs.png) 
+                        
+                        <small>
+                            [JS-Recon](http://www.andlabs.org/tools/jsrecon/jsrecon.html)  
+                            [Shell of the Future](http://blog.andlabs.org/2010/07/shell-of-future-reverse-web-shell.html) 
+                        </small>
+                    </section>
+
+                    <section data-markdown>
+                        [![JS-RECON](images/js-recon.png)](http://www.andlabs.org/tools/jsrecon.html)
+                    </section> 
+                    
+                    <section data-markdown>
+                        ## Intranet == Internet
+                        ![Internet](images/icon_file.png)
                     </section>
             
                 </section> 
