@@ -72,6 +72,7 @@
     <Content Include="examples\xss-rules\4.html" />
     <Content Include="images\codingHorror.png" />
     <Content Include="images\favicon.ico" />
+    <Content Include="images\hakin9.png" />
     <Content Include="images\html5-badge-all.png" />
     <Content Include="images\icon_bug.png" />
     <Content Include="images\icon_communication.png" />
