@@ -19,7 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <JSLintSkip>\js\reveal.min.js|\js\jquery.js|\js\require.js|\js\reveal.js|\js\1_jasmine-demo_fail\saveFormat.js|\js\1_jasmine-demo_fail\saveFormat.spec.js|\js\2_jasmine-demo_pass\saveFormat.js|\js\2_jasmine-demo_pass\saveFormat.spec.js|\js\3_jasmine-demo_refactor\saveFormat.js|\js\3_jasmine-demo_refactor\saveFormat.spec.js|\js\4_jasmine-demo_repeat\saveFormat.js|\js\4_jasmine-demo_repeat\saveFormat.spec.js|\js\5_jasmine-demo_jquery\jquery.myPlugin.js|\js\5_jasmine-demo_jquery\jquery.myPlugin.spec.js|\js\6_jasmine-demo_spies\garfield.js|\js\6_jasmine-demo_spies\garfield.spec.js|\lib\js\classList.js|\lib\js\head.min.js|\lib\js\html5shiv.js|\plugin\highlight\highlight.js|\plugin\markdown\markdown.js|\plugin\markdown\showdown.js|\plugin\notes\notes.js|\plugin\notes-server\client.js|\plugin\notes-server\index.js|\plugin\postmessage\postmessage.js|\plugin\remotes\remotes.js|\plugin\zoom-js\zoom.js|\js\jasmine\lib\jasmine-1.3.1\jasmine.js|\js\jasmine\lib\jasmine-1.3.1\jasmine-html.js|\js\jasmine\lib\jasmine-1.3.1\jasmine.console_reporter.js|\js\jasmine\spec\PlayerSpec.js|\js\jasmine\spec\SpecHelper.js|\js\jasmine\lib\jasmine-jquery.js|\js\jquery-1.9.1.js|\plugin\print-pdf\print-pdf.js|\js\notifier.js|\js\purl.js|\js\cookie.js|\js\knockout-2.2.1.js|\js\knockout.mapping-latest.debug.js|\js\knockout.mapping-latest.js|\js\knockout-2.2.1.debug.js</JSLintSkip>
+    <JSLintSkip>\js\reveal.min.js|\js\jquery.js|\js\require.js|\js\reveal.js|\js\1_jasmine-demo_fail\saveFormat.js|\js\1_jasmine-demo_fail\saveFormat.spec.js|\js\2_jasmine-demo_pass\saveFormat.js|\js\2_jasmine-demo_pass\saveFormat.spec.js|\js\3_jasmine-demo_refactor\saveFormat.js|\js\3_jasmine-demo_refactor\saveFormat.spec.js|\js\4_jasmine-demo_repeat\saveFormat.js|\js\4_jasmine-demo_repeat\saveFormat.spec.js|\js\5_jasmine-demo_jquery\jquery.myPlugin.js|\js\5_jasmine-demo_jquery\jquery.myPlugin.spec.js|\js\6_jasmine-demo_spies\garfield.js|\js\6_jasmine-demo_spies\garfield.spec.js|\lib\js\classList.js|\lib\js\head.min.js|\lib\js\html5shiv.js|\plugin\highlight\highlight.js|\plugin\markdown\markdown.js|\plugin\markdown\showdown.js|\plugin\notes\notes.js|\plugin\notes-server\client.js|\plugin\notes-server\index.js|\plugin\postmessage\postmessage.js|\plugin\remotes\remotes.js|\plugin\zoom-js\zoom.js|\js\jasmine\lib\jasmine-1.3.1\jasmine.js|\js\jasmine\lib\jasmine-1.3.1\jasmine-html.js|\js\jasmine\lib\jasmine-1.3.1\jasmine.console_reporter.js|\js\jasmine\spec\PlayerSpec.js|\js\jasmine\spec\SpecHelper.js|\js\jasmine\lib\jasmine-jquery.js|\js\jquery-1.9.1.js|\plugin\print-pdf\print-pdf.js|\js\notifier.js|\js\purl.js|\js\cookie.js|\js\knockout-2.2.1.js|\js\knockout.mapping-latest.debug.js|\js\knockout.mapping-latest.js|\js\knockout-2.2.1.debug.js|\examples\jasmine-demo\saveFormat.js|\examples\jasmine-demo\saveFormat.spec.js|\examples\jasmine-demo2\saveFormat.js|\examples\jasmine-demo2\saveFormat.spec.js|\examples\jasmine\lib\jasmine-1.3.1\jasmine.js|\examples\jasmine\lib\jasmine-1.3.1\jasmine-html.js|\examples\jasmine\lib\jasmine-1.3.1\jasmine.console_reporter.js|\examples\jasmine\lib\jasmine-jquery.js|\examples\jasmine\spec\PlayerSpec.js|\examples\jasmine\spec\SpecHelper.js</JSLintSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,11 +51,27 @@
     <Content Include="css\theme\simple.css" />
     <Content Include="css\theme\sky.css" />
     <Content Include="css\theme\yellowJS.css" />
+    <Content Include="examples\jasmine-demo2\saveFormat.js" />
+    <Content Include="examples\jasmine-demo2\saveFormat.spec.js" />
+    <Content Include="examples\jasmine-demo2\SpecRunner.html" />
     <Content Include="examples\css-expressions-reloaded\exploit.htc" />
     <Content Include="examples\css-expressions-reloaded\exploit.xml" />
     <Content Include="examples\css-expressions-reloaded\index.html" />
     <Content Include="examples\formaction\clean.html" />
     <Content Include="examples\formaction\index.html" />
+    <Content Include="examples\jasmine-demo\saveFormat.js" />
+    <Content Include="examples\jasmine-demo\saveFormat.spec.js" />
+    <Content Include="examples\jasmine-demo\SpecRunner.html" />
+    <Content Include="examples\jasmine\lib\jasmine-1.3.1\jasmine-html.js" />
+    <Content Include="examples\jasmine\lib\jasmine-1.3.1\jasmine.console_reporter.js" />
+    <Content Include="examples\jasmine\lib\jasmine-1.3.1\jasmine.css" />
+    <Content Include="examples\jasmine\lib\jasmine-1.3.1\jasmine.js" />
+    <Content Include="examples\jasmine\lib\jasmine-jquery.js" />
+    <Content Include="examples\jasmine\SpecRunner.html" />
+    <Content Include="examples\jasmine\spec\PlayerSpec.js" />
+    <Content Include="examples\jasmine\spec\SpecHelper.js" />
+    <Content Include="examples\jasmine\src\Player.js" />
+    <Content Include="examples\jasmine\src\Song.js" />
     <Content Include="examples\jsonp\jsonp_by_hand.html" />
     <Content Include="examples\jsonp\index.html" />
     <Content Include="examples\jsonp\loadTweets.js" />
@@ -81,6 +97,7 @@
     <Content Include="images\icon_mustache.png" />
     <Content Include="images\icon_storage.png" />
     <Content Include="images\icon_tool.png" />
+    <Content Include="images\jasmine_logo_bg.png" />
     <Content Include="images\js-recon.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo_big.png" />
@@ -160,6 +177,7 @@
     <None Include="css\theme\template\mixins.scss" />
     <None Include="css\theme\template\settings.scss" />
     <None Include="css\theme\template\theme.scss" />
+    <Content Include="examples\jasmine\lib\jasmine-1.3.1\MIT.LICENSE" />
     <None Include="lib\font\league_gothic-webfont.eot" />
     <None Include="lib\font\league_gothic-webfont.ttf" />
     <None Include="lib\font\league_gothic-webfont.woff" />
