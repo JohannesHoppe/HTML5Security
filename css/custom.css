@@ -114,31 +114,36 @@ ul.model.jasmine span {
 }
 */
 
-code.small {
-    font-size: 14px;
-    line-height: 16px;
-    max-height: 500px;
-}
-
-/*
 .reveal .state-background {
     background-image: url('../images/pixel.png');
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 454px 454px;
 }
-*/
 
-/*
+.jasmine .reveal .state-background {
+    background-image: url('../images/jasmine_logo_bg.png');
+    
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-image 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+    transition: background-image 0.8s linear;
+}
+
+code.small {
+    font-size: 14px;
+    line-height: 16px;
+    max-height: 500px;
+}
+
 iframe.spec {
     
-    height: 400px;
+    height: 300px;
     width: 600px;
     border: 1px solid silver;
     box-shadow: #000000 0 2px 5px;
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
 }
-*/
 
 /* example: formaction */
 .example_formaction form {
