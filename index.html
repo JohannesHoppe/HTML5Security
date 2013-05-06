@@ -462,20 +462,15 @@
 
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.min.js"></script> 
-        
-        <!-- delicious libs for some live hacking -->
+                             
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/require.js"></script> 
         <script src="js/require.config.js"></script>
-        <script src="js/cookie.js"></script>
         <script>
 
-            require(['jquery'], function ($) {
+            require(['jquery', 'cookie'], function ($, cookie) {
 
-                createCookie('secret', 'cookie value', 99);
-
-                // tasty hack to get back the old global $
-                //window.$ = window.jquery = jquery;
+                cookie.createCookie('secret', 'cookie value', 99);
                 
                 // some dirty fixes
                 $("code[fragment]").addClass("fragment");

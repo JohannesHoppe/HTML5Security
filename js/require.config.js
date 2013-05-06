@@ -2,9 +2,9 @@
     //enforceDefine: true,
     baseUrl: "js",
     paths: {
-        'jquery': 'jquery-1.9.1',
+        'jquery': 'jquery-1.9.1.min',
         'knockout': 'knockout-2.2.1',
-        'knockout.mapping': 'knockout.mapping-latest',        
+        'knockout.mapping': 'knockout.mapping-latest'
     },
     shim: {
         'knockout': { deps: ['jquery'] }

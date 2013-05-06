@@ -32,6 +32,11 @@
                 var snippet = extractSnippet(data);
                 var snippetEncoded = $('<div />').text(snippet).html();
                 code.innerHTML = snippetEncoded;
+                
+                // re-render syntax highlighting
+                if (typeof window.hljs == "object") {
+                    window.hljs.highlightBlock(code);
+                }
             });
         });
     };
