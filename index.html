@@ -25,6 +25,7 @@
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
+            //var x = "@Html.Raw()Asdadsaxx"
             document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
         </script>
 
@@ -471,11 +472,7 @@
             require(['jquery', 'cookie'], function ($, cookie) {
 
                 cookie.createCookie('secret', 'cookie value', 99);
-                
-                // some dirty fixes
-                $("code[fragment]").addClass("fragment");
-                $("code[small]").addClass("small");
-                
+
                 // start print page if print-pdf link was clicked
                 $(function () {
                     if (window.location.search.match(/print-pdf/gi)) {

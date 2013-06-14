@@ -39,5 +39,8 @@
         if( notes ) {
             section.appendChild( notes );
         }
+        
+        $("code[fragment]").addClass("fragment");
+        $("code[small]").addClass("small");
     }
 })();
