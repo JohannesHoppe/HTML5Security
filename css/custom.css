@@ -247,4 +247,8 @@ iframe.spec {
     margin-left: 25% !important;
 }
 
+.showPrint {
+    display: none !important;
+}
+
 /* ReSharper restore UnknownHtmlTag */

@@ -178,3 +178,7 @@ ul, ol, div, p {
 .hidePrint {
 	display: none !important;
 }
+
+.showPrint {
+	display: block !important;
+}
